@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>llm-isabelle — Assignment 2 Topology</title>
+<style>
+  :root{
+    --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --border:#30363d;
+    --fg:#e6edf3; --mute:#8b949e;
+    --ok:#3fb950; --wip:#f85149; --new:#58a6ff; --warn:#d29922; --accent:#bc8cff;
+    --mono:'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+       background:var(--bg);color:var(--fg);padding:24px}
+  h1{font-size:24px;margin:0 0 4px 0}
+  h2{font-size:18px;margin:24px 0 8px;color:var(--fg);
+     border-bottom:1px solid var(--border);padding-bottom:6px}
+  h3{font-size:14px;margin:0 0 8px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em}
+  .sub{color:var(--mute);margin:0 0 16px}
+  code,.mono{font-family:var(--mono);font-size:12px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;
+         font-family:var(--mono);letter-spacing:.04em;border:1px solid transparent}
+  .b-ok  {background:rgba(63,185,80,.12);color:var(--ok); border-color:rgba(63,185,80,.4)}
+  .b-wip {background:rgba(248,81,73,.12);color:var(--wip);border-color:rgba(248,81,73,.4)}
+  .b-new {background:rgba(88,166,255,.12);color:var(--new);border-color:rgba(88,166,255,.4)}
+  .b-warn{background:rgba(210,153,34,.12);color:var(--warn);border-color:rgba(210,153,34,.4)}
+  .grid{display:grid;gap:12px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:14px}
+  .card.inner{background:var(--panel2)}
+  .row{display:flex;gap:12px;flex-wrap:wrap}
+  .col{flex:1;min-width:260px}
+  .pill{display:inline-block;border:1px solid var(--border);background:var(--panel2);
+        padding:2px 6px;border-radius:4px;font-family:var(--mono);font-size:11px;color:var(--mute)}
+  .arrow{font-size:18px;color:var(--mute);align-self:center;text-align:center}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{padding:8px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+  th{color:var(--mute);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+  td.center,th.center{text-align:center}
+  ul{margin:6px 0 0 0;padding-left:18px}
+  li{margin:3px 0}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0 0}
+  .legend span{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mute)}
+  .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+  /* Loop diagram */
+  .loop{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:stretch}
+  .loop .node{background:var(--panel2);border:1px solid var(--border);border-radius:8px;
+              padding:10px;text-align:center}
+  .loop .node b{display:block;font-size:13px}
+  .loop .node small{color:var(--mute);font-size:11px}
+
+  /* Tier blocks */
+  .tier{border-left:3px solid var(--border);padding-left:10px}
+  .tier.s{border-color:var(--wip)}
+  .tier.a{border-color:var(--new)}
+  .tier.b{border-color:var(--accent)}
+
+  /* File tree */
+  .tree{font-family:var(--mono);font-size:12px;line-height:1.65;white-space:pre;color:var(--mute)}
+  .tree b{color:var(--fg);font-weight:600}
+  .tree .ok{color:var(--ok)}
+  .tree .wip{color:var(--wip)}
+  .tree .new{color:var(--new)}
+
+  /* Matrix */
+  .mx td.cell{text-align:center;font-family:var(--mono);font-size:13px}
+  .mx .yes{color:var(--ok)}
+  .mx .no{color:var(--wip)}
+  .mx .mid{color:var(--warn)}
+  .mx .strong{color:var(--new);font-weight:700}
+
+  .small{font-size:12px;color:var(--mute)}
+  .kvp{display:grid;grid-template-columns:140px 1fr;gap:6px 12px;font-size:13px}
+  .kvp dt{color:var(--mute)}
+  .kvp dd{margin:0}
+  hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+</style>
+</head>
+<body>
+
+<h1>llm-isabelle — Assignment 2 Topology</h1>
+<p class="sub">LLM-guided Isabelle/HOL theorem prover. Baseline + WIP gaps + improvements.</p>
+
+<div class="legend">
+  <span><i class="dot" style="background:var(--ok)"></i> Working in baseline</span>
+  <span><i class="dot" style="background:var(--wip)"></i> WIP — must fix (graded)</span>
+  <span><i class="dot" style="background:var(--new)"></i> New — our improvement</span>
+  <span><i class="dot" style="background:var(--accent)"></i> Stretch / polish</span>
+</div>
+
+<!-- ========================================================= -->
+<h2>1. Core concept</h2>
+<div class="card">
+  <div class="loop">
+    <div class="node"><b>Goal</b><small>e.g. <code>rev (rev xs) = xs</code></small></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>LLM</b><small>Gemini CLI / Ollama / HF<br>proposes tactic</small></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Isabelle/HOL</b><small>verifies<br>FINISHED ok=true?</small></div>
+  </div>
+  <p class="small" style="margin-top:10px">
+    Loop until proved or budget exhausted. Augmented with sledgehammer / quickcheck / nitpick,
+    beam search, ML reranker, premise selection.
+  </p>
+</div>
+
+<!-- ========================================================= -->
+<h2>2. Two entry points</h2>
+<div class="row">
+
+  <div class="col card">
+    <h3>Prover — stepwise tactic search</h3>
+    <code class="mono">python -m prover.cli --goal '...' --model 'gemini:gemini-3-flash-preview'</code>
+    <p class="small" style="margin-top:8px">One tactic at a time. Beam search + sledgehammer + counter-example tools.</p>
+    <ul>
+      <li><span class="badge b-ok">OK</span> LLM tactic generation</li>
+      <li><span class="badge b-ok">OK</span> Sledgehammer / Quickcheck / Nitpick</li>
+      <li><span class="badge b-ok">OK</span> Beam search</li>
+      <li><span class="badge b-ok">OK</span> ML reranker (XGBoost / DQN / AWR)</li>
+      <li><span class="badge b-ok">OK</span> Premise selection (bi+cross encoder)</li>
+    </ul>
+  </div>
+
+  <div class="col card">
+    <h3>Planner — Isar outline + Fill + Repair</h3>
+    <code class="mono">python -m planner.cli --mode auto '...'</code>
+    <p class="small" style="margin-top:8px">LLM writes whole-proof skeleton, fills holes, repairs broken parts.</p>
+    <ul>
+      <li><span class="badge b-ok">OK</span> Outline generation (multi-temp)</li>
+      <li><span class="badge b-ok">OK</span> Micro RAG (token priors + hint lexicon)</li>
+      <li><span class="badge b-wip">WIP</span> <b>Fill</b> — call prover at <code>sorry</code></li>
+      <li><span class="badge b-wip">WIP</span> <b>CEGIS Repair</b> — staged regen</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ========================================================= -->
+<h2>3. Planner data flow (where WIP lives)</h2>
+<div class="card">
+  <div class="loop" style="grid-template-columns:1fr auto 1fr auto 1fr auto 1fr">
+    <div class="node"><b>Goal</b><small>+ optional context</small></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>Outline</b><small>Isar skeleton<br>contains <code>sorry</code></small></div>
+    <div class="arrow">→</div>
+    <div class="node" style="border-color:var(--wip)"><b>Fill</b>
+      <small><span class="badge b-wip">WIP</span><br>subgoal → prover → splice</small></div>
+    <div class="arrow">→</div>
+    <div class="node" style="border-color:var(--wip)"><b>Repair</b>
+      <small><span class="badge b-wip">WIP</span><br>3-stage regen on failure</small></div>
+  </div>
+  <p class="small" style="margin-top:12px">
+    After every Repair edit → re-run Fill on any new <code>sorry</code> → re-check Isabelle.
+    Budgets per stage + global timeout prevent infinite loops.
+  </p>
+</div>
+
+<!-- ========================================================= -->
+<h2>4. Project layout</h2>
+<div class="row">
+
+  <div class="col card">
+    <h3>prover/</h3>
+<div class="tree">
+prover/
+├── <b>cli.py</b>           entry point
+├── <b>prover.py</b>        <span class="ok">prove_goal loop</span>
+├── <b>isabelle_api.py</b>  <span class="ok">JSON server bridge</span>
+├── <b>llm.py</b>           gemini / ollama / hf
+├── <b>tactics.py</b>       <span class="ok">sledge/qc/np</span>
+├── <b>ranker.py</b>        <span class="ok">ML reranker</span>
+├── <b>premises.py</b>      <span class="ok">bi-encoder retrieval</span>
+├── <b>prompts.py</b>       tactic templates
+├── train_reranker.py   <span class="ok">XGB / DQN / AWR</span>
+└── train_premises.py   <span class="ok">bi + cross encoder</span>
+</div>
+  </div>
+
+  <div class="col card">
+    <h3>planner/</h3>
+<div class="tree">
+planner/
+├── <b>cli.py</b>           entry point
+├── <b>driver.py</b>        <span class="ok">plan_and_fill</span>
+├── <b>skeleton.py</b>      Isar scaffolding
+├── <b>prompts.py</b>       outline / fill / repair
+├── <b>extract.py</b>       <span class="ok">AFP corpus miner</span>
+├── <b>priors.py</b>        <span class="ok">micro RAG (priors+lex)</span>
+├── <b>repair_inputs.py</b> <span class="wip">hole-context + nitpick CE</span>
+└── <b>repair.py</b>        <span class="wip">3-stage CEGIS</span>
+</div>
+  </div>
+
+  <div class="col card">
+    <h3>support</h3>
+<div class="tree">
+datasets/         goal files
+  ├── lists.txt           <span class="ok">small smoke</span>
+  ├── mini_f2f/           <span class="ok">comp bench</span>
+  └── putnambench/        <span class="ok">harder bench</span>
+logs/             attempts + runs jsonl
+baselines/        sledge-only
+isabelle_ui/      jEdit HTTP server
+external/         AFP, miniF2F clones
+<span class="new">planner/rag.py    NEW vector RAG</span>
+</div>
+  </div>
+
+</div>
+
+<!-- ========================================================= -->
+<h2>5. WIP detail — what's broken, what to fix</h2>
+
+<div class="row">
+
+  <div class="col card">
+    <h3 style="color:var(--wip)">Fill (graded)</h3>
+    <p class="small">Earliest <code>sorry</code> → extract local subgoal → call stepwise prover → splice replacement.</p>
+    <ul>
+      <li>Fix subgoal extraction (<code>print_state</code> parse, multi-subgoal, schematics)</li>
+      <li>Pass context: assumptions + prior <code>have</code>s + retrieved premises</li>
+      <li>Splice with correct indentation, preserve outer <code>proof…qed</code></li>
+      <li>Top-down deterministic ordering</li>
+      <li>Feed nitpick CE hints to prover sub-call</li>
+    </ul>
+    <p class="small mono">files: planner/repair_inputs.py, planner/driver.py:_fill_one_hole</p>
+  </div>
+
+  <div class="col card">
+    <h3 style="color:var(--wip)">CEGIS Repair (graded)</h3>
+    <p class="small">Earliest non-<code>sorry</code> failure → regen smallest enclosing block → escalate.</p>
+    <ol>
+      <li><b>Stage 1</b> local <code>have</code>/<code>show</code> block</li>
+      <li><b>Stage 2</b> case-branch / inner <code>proof…qed</code></li>
+      <li><b>Stage 3</b> whole proof</li>
+    </ol>
+    <ul>
+      <li>Earliest failure anchoring from FINISHED JSON</li>
+      <li>Per-stage attempt budget + global timeout</li>
+      <li>Re-Fill any new <code>sorry</code> after edit</li>
+      <li>Define "failed" precisely (no-sorry-unverified OR Fill-can't-close)</li>
+    </ul>
+    <p class="small mono">files: planner/repair.py</p>
+  </div>
+
+</div>
+
+<!-- ========================================================= -->
+<h2>6. Improvement topology</h2>
+<div class="row">
+
+  <div class="col card tier s">
+    <h3 style="color:var(--wip)">Tier S — must-do</h3>
+    <ol>
+      <li>Fill works (subgoal + splice + context)</li>
+      <li>CEGIS Repair stages 1–3 + budgets + re-Fill loop</li>
+    </ol>
+  </div>
+
+  <div class="col card tier a">
+    <h3 style="color:var(--new)">Tier A — differentiators</h3>
+    <ol start="3">
+      <li>Candidate pool + scoring <code>(lines_verified − open_sorrys)</code></li>
+      <li>AFP <b>vector RAG</b> (bi-encoder index + cross-encoder rerank)</li>
+      <li>Error-typed prompts (type / unknown / unsolved / syntax)</li>
+      <li>True CEGIS — feed nitpick CE into repair prompt</li>
+    </ol>
+  </div>
+
+  <div class="col card tier b">
+    <h3 style="color:var(--accent)">Tier B — polish</h3>
+    <ol start="7">
+      <li>Memoize / dedupe proposals</li>
+      <li>Reranker picks first repair stage</li>
+      <li>Beam over candidate pool</li>
+      <li>Local-<code>have</code> harvesting for Fill</li>
+      <li>Offline retraining of rerankers</li>
+    </ol>
+  </div>
+
+</div>
+
+<!-- ========================================================= -->
+<h2>7. AFP vector RAG (new module)</h2>
+<div class="card">
+  <div class="loop" style="grid-template-columns:1fr auto 1fr auto 1fr auto 1fr">
+    <div class="node"><b>AFP .thy files</b><small>isa-afp.org<br>~800 entries</small></div>
+    <div class="arrow">→</div>
+    <div class="node"><b>mine_afp_corpus_rich</b><small>(statement, proof, header)<br><span class="badge b-ok">exists</span></small></div>
+    <div class="arrow">→</div>
+    <div class="node" style="border-color:var(--new)"><b>Bi-encoder index</b>
+      <small>all-MiniLM-L6-v2<br>FAISS / sklearn NN<br><span class="badge b-new">new</span></small></div>
+    <div class="arrow">→</div>
+    <div class="node" style="border-color:var(--new)"><b>Cross-encoder rerank</b>
+      <small>ms-marco-MiniLM<br>top-K exemplars<br><span class="badge b-new">new</span></small></div>
+  </div>
+  <p class="small" style="margin-top:10px">
+    Retrieved exemplars injected at <b>3 points</b>:
+    outline generation (planner), Fill prompt, Repair prompt.
+    Grounds LLM in real Isabelle vocab — kills hallucinated lemma names.
+  </p>
+</div>
+
+<!-- ========================================================= -->
+<h2>8. Evaluation matrix</h2>
+<div class="card">
+  <table class="mx">
+    <thead>
+      <tr>
+        <th>Variant</th>
+        <th class="center">Fill</th>
+        <th class="center">Repair</th>
+        <th class="center">Pool</th>
+        <th class="center">RAG</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>baseline-as-is</td>
+        <td class="cell no">✗</td><td class="cell no">✗</td>
+        <td class="cell no">–</td><td class="cell mid">micro</td></tr>
+      <tr><td>ours-fill</td>
+        <td class="cell yes">✓</td><td class="cell no">✗</td>
+        <td class="cell no">–</td><td class="cell mid">micro</td></tr>
+      <tr><td>ours-fill+repair</td>
+        <td class="cell yes">✓</td><td class="cell yes">✓</td>
+        <td class="cell no">–</td><td class="cell mid">micro</td></tr>
+      <tr><td>ours-+pool</td>
+        <td class="cell yes">✓</td><td class="cell yes">✓</td>
+        <td class="cell yes">✓</td><td class="cell mid">micro</td></tr>
+      <tr><td>ours-+RAG</td>
+        <td class="cell yes">✓</td><td class="cell yes">✓</td>
+        <td class="cell yes">✓</td><td class="cell strong">vector</td></tr>
+      <tr><td><b>ours-full</b></td>
+        <td class="cell yes">✓</td><td class="cell yes">✓</td>
+        <td class="cell yes">✓</td><td class="cell strong">vector+rerank</td></tr>
+    </tbody>
+  </table>
+  <p class="small" style="margin-top:10px">
+    Datasets: miniF2F validation/test, lists.txt, optional PutnamBench.<br>
+    Metrics: pass rate, wall-clock time, LLM calls, proof length, remaining holes.
+  </p>
+</div>
+
+<!-- ========================================================= -->
+<h2>9. Roles (4-person split)</h2>
+<div class="card">
+  <table>
+    <thead><tr><th>Person</th><th>Workstream</th><th>Tier</th></tr></thead>
+    <tbody>
+      <tr><td>A</td><td>Fill — subgoal extraction, context passing, splicing</td><td><span class="badge b-wip">S</span></td></tr>
+      <tr><td>B</td><td>CEGIS Repair — stages 1–3, budgets, anchoring, re-Fill loop</td><td><span class="badge b-wip">S</span></td></tr>
+      <tr><td>C</td><td>AFP vector RAG — mine, index, retrieve API, prompt wiring</td><td><span class="badge b-new">A</span></td></tr>
+      <tr><td>D</td><td>Candidate pool + error-typed prompts + CE-driven repair</td><td><span class="badge b-new">A</span></td></tr>
+    </tbody>
+  </table>
+  <p class="small" style="margin-top:8px">All members → eval matrix + LNCS report.</p>
+</div>
+
+<!-- ========================================================= -->
+<h2>10. Environment (verified working)</h2>
+<div class="card">
+  <dl class="kvp">
+    <dt>Python</dt><dd>3.12.13 venv at <code>llm-isabelle/.venv</code></dd>
+    <dt>Isabelle</dt><dd>Isabelle2025-2 → <code>/opt/homebrew/bin/isabelle</code></dd>
+    <dt>LLM</dt><dd>Gemini CLI 0.38.2 — <code>gemini-3-flash-preview</code> (OAuth'd)</dd>
+    <dt>Deps</dt><dd>scikit-learn · xgboost · torch · sentence-transformers · isabelle-client 1.1.1 · fastapi · uvicorn</dd>
+    <dt>Smoke test</dt><dd><span class="badge b-ok">PASS</span> <code>rev (rev xs) = xs</code> → <code>by simp</code></dd>
+    <dt>Origin</dt><dd><code>griffith-assignments/llm-isabelle-group-23</code></dd>
+    <dt>Roadmap</dt><dd>Issue <code>#1</code></dd>
+  </dl>
+</div>
+
+<hr>
+<p class="small" style="text-align:center">
+  3806ICT — Logic &amp; Automated Reasoning · Trimester 1, 2026 · Due 29 May 2026 · LNCS ≤ 16 pages
+</p>
+
+</body>
+</html>
