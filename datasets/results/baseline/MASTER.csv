@@ -1,0 +1,14 @@
+pipeline,dataset,n,success,pass_rate,median_s,mean_s,had_sorry_count,fills_median,failed_holes_median
+B0_sledge,hol_easy_test,100,88,0.88,10.06,15.93,,,
+B0_sledge,hol_hard_test,100,64,0.64,10.86,24.37,,,
+B0_sledge,hol_mid_test,100,71,0.71,10.3,19.54,,,
+B0_sledge,smoke_lists,18,17,0.9440000000000001,9.18,10.94,,,
+B0_sledge,smoke_logic,5,5,1.0,8.84,8.74,,,
+B0_sledge,smoke_nat,9,4,0.444,22.8,18.11,,,
+B0_sledge,smoke_sets,8,8,1.0,9.25,9.7,,,
+B1_prover,hol_easy,100,95,0.95,23.37557804584503,26.58803860425949,,,
+B1_prover,hol_hard,100,81,0.81,17.301935076713562,42.99136168956757,,,
+B1_prover,hol_mid,100,75,0.75,17.63368308544159,39.85741541624069,,,
+B1_prover,lists,18,10,0.5555555555555556,28.293372631072998,30.310775134298538,,,
+B2_planner,hol_easy,100,0,0.0,135.982,238.956152,2,0,0
+B2_planner,smoke_lists,18,2,0.1111111111111111,120.5291,136.39229444444445,16,0,0

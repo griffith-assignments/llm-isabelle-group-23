@@ -1,0 +1,144 @@
+server "isabelle" = 127.0.0.1:55935 (password "8c351ce4-86f7-4a56-95d8-6ca971145d65")
+session_id: 8149532f-ab48-4da8-a6ec-e686ed1711db
+\n=== Running suite: lists (18 goals) ===
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [1/18] x ∈ set xs ⟹ x ∈ set (xs @ ys)
+
+▶ Goal: x ∈ set xs ⟹ x ∈ set (xs @ ys)
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, llm:by clarsimp, llm:by fastforce, llm:by blast, llm:by (metis set_append)]
+  finish × [sledge] by simp  (2235ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [2/18] set (xs @ ys) = set xs ∪ set ys
+
+▶ Goal: set (xs @ ys) = set xs ∪ set ys
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, llm:by fastforce, llm:by blast, llm:by (simp add: set_append), llm:by (metis set_append)]
+  finish ✓ [sledge] by simp  (2231ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [3/18] map id xs = xs
+
+▶ Goal: map id xs = xs
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, llm:by (simp add: id_def), llm:by (metis map_id), llm:by (induct xs) auto, llm:by (induct xs) simp_all]
+  finish × [sledge] by simp  (2229ms)
+  finish × [sledge] by auto  (2106ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [4/18] take (length xs) (xs @ ys) = xs
+
+▶ Goal: take (length xs) (xs @ ys) = xs
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, llm:by fastforce, llm:by blast, llm:by (simp add: take_append), llm:by (metis take_append)]
+  finish ✓ [sledge] by simp  (2233ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [5/18] map f (xs @ ys) = map f xs @ map f ys
+
+▶ Goal: map f (xs @ ys) = map f xs @ map f ys
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, llm:by (simp add: map_append), llm:by (metis map_append), llm:by (induct xs) auto, llm:by (induct xs, auto)]
+  finish ✓ [sledge] by simp  (2221ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [6/18] length (xs @ ys) = length xs + length ys
+
+▶ Goal: length (xs @ ys) = length xs + length ys
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, llm:by fastforce, llm:by (simp add: length_append), llm:by (metis length_append), llm:by (induct xs) auto]
+  finish ✓ [sledge] by simp  (2230ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [7/18] filter p (xs @ ys) = filter p xs @ filter p ys
+
+▶ Goal: filter p (xs @ ys) = filter p xs @ filter p ys
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by blast', 'by auto', 'by fastforce', 'by force']
+Finishers (origin): [sledge:by blast, sledge:by auto, sledge:by fastforce, sledge:by force, llm:by simp, llm:by (simp add: filter_append), llm:by (metis filter_append), llm:by (induct xs) auto, llm:by (induction xs) simp_all]
+  finish × [sledge] by blast  (2237ms)
+  finish × [sledge] by auto  (2101ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [8/18] map f (rev xs) = rev (map f xs)
+
+▶ Goal: map f (rev xs) = rev (map f xs)
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by (simp add: rev_map)', 'by simp add: rev_map', 'by simp']
+Finishers (origin): [sledge:by (simp add: rev_map), sledge:by simp add: rev_map, sledge:by simp, llm:by (metis rev_map), llm:by (metis map_rev), llm:by (induct xs) auto, llm:by (induct xs) simp_all, llm:by (rule rev_map)]
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [9/18] drop (length xs) (xs @ ys) = ys
+
+▶ Goal: drop (length xs) (xs @ ys) = ys
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, llm:by fastforce, llm:by blast, llm:by (metis drop_append), llm:by (induction xs) simp_all]
+  finish ✓ [sledge] by simp  (2230ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [10/18] distinct xs ⟹ distinct (rev xs)
+
+▶ Goal: distinct xs ⟹ distinct (rev xs)
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, llm:by fastforce, llm:by blast, llm:by (metis distinct_rev), llm:by (induction xs) auto]
+  finish ✓ [sledge] by simp  (2224ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [11/18] xs @ [] = xs
+
+▶ Goal: xs @ [] = xs
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by blast', 'by auto', 'by fastforce', 'by force']
+Finishers (origin): [sledge:by simp, sledge:by blast, sledge:by auto, sledge:by fastforce, sledge:by force, llm:by (induct xs) auto, llm:by (induct xs) simp_all]
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [12/18] take n xs @ drop n xs = xs
+
+▶ Goal: take n xs @ drop n xs = xs
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by auto', 'by simp']
+Finishers (origin): [sledge:by auto, sledge:by simp, llm:by blast, llm:by (metis append_take_drop_id), llm:by (induct n arbitrary: xs) auto, llm:by (induct n) auto]
+  finish ✓ [sledge] by auto  (2227ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [13/18] [] @ xs = xs
+
+▶ Goal: [] @ xs = xs
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto', 'by blast']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by blast, llm:by clarsimp, llm:by fastforce, llm:by (rule append.simps)]
+  finish ✓ [sledge] by simp  (2214ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [14/18] x ∈ set ys ⟹ x ∈ set (xs @ ys)
+
+▶ Goal: x ∈ set ys ⟹ x ∈ set (xs @ ys)
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, llm:by fastforce, llm:by blast, llm:by (simp add: set_append), llm:by (metis set_append UnI2)]
+  finish × [sledge] by simp  (2224ms)
+  finish × [sledge] by auto  (2109ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [15/18] map f (filter p xs) = filter (λx. p x) (map f xs)
+
+▶ Goal: map f (filter p xs) = filter (λx. p x) (map f xs)
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by auto, llm:by fastforce, llm:by blast, llm:by (induct xs) auto, llm:by (induct xs) simp_all]
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [16/18] length (rev xs) = length xs
+
+▶ Goal: length (rev xs) = length xs
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, llm:by fastforce, llm:by blast, llm:by (induct xs) auto, llm:by (induct xs) simp_all]
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [17/18] rev (rev xs) = xs
+
+▶ Goal: rev (rev xs) = xs
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, llm:by fastforce, llm:by blast, llm:by (induct xs) auto, llm:by (induct xs) simp_all]
+  finish ✓ [sledge] by simp  (2223ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [18/18] rev (xs @ ys) = rev ys @ rev xs
+
+▶ Goal: rev (xs @ ys) = rev ys @ rev xs
+Models: gemini:gemini-3-flash-preview | Beam=3 | MaxDepth=6 | Timeout=30s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, llm:by blast, llm:by (induct xs) auto, llm:by (induct xs) simp_all]
+  finish ✓ [sledge] by simp  (2221ms)
+✔ PROVED
+\n=== Benchmark Report ===
+Suite:  lists
+Config: rerank_on__sledge_on__model_gemini:gemini-3-flash-preview
+  Success: 10 / 18  (55.6%)
+  Median time (all): 28.29s | Avg depth: 1.00
+CSV → datasets/results/20260515-170514-lists-rerank_on__sledge_on__model_gemini:gemini-3-flash-preview.csv

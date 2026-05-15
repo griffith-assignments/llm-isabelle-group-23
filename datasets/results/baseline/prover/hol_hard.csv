@@ -1,0 +1,101 @@
+goal,success,depth,elapsed_s,model,timeout,use_calls,steps_len
+{x∈A. P x} ∪ {x∈A. ¬ P x} = A,True,1,16.78069305419922,gemini:gemini-3-flash-preview,False,2,2
+(g ∘ f) ` (A ∩ B) ⊆ g ` (f ` A) ∩ g ` (f ` B),True,1,32.307719230651855,gemini:gemini-3-flash-preview,False,6,2
+sum (λi. (f i + g i)::int) {..<m} = sum (λi. f i) {..<m} + sum (λi. g i) {..<m},True,1,21.769275188446045,gemini:gemini-3-flash-preview,False,9,2
+finite A ⟹ card (A ∩ B) + card (A - B) = card A - card (A ∩ (B - A)),True,2,87.66472792625427,gemini:gemini-3-flash-preview,False,27,3
+(f ∘ g) ∘ h = f ∘ (g ∘ h),True,1,15.235761165618896,gemini:gemini-3-flash-preview,False,29,2
+converse (rtrancl r) = rtrancl (converse r),True,1,15.166266202926636,gemini:gemini-3-flash-preview,False,31,2
+(∀x. P x ⟷ Q x) ⟶ ((∀x. R x ⟶ P x) ⟷ (∀x. R x ⟶ Q x)),True,1,15.029531002044678,gemini:gemini-3-flash-preview,False,33,2
+map f (take n xs) = take n (map f xs),True,1,18.135123014450073,gemini:gemini-3-flash-preview,False,35,2
+finite A ⟹ finite B ⟹ card (A × B - C) = card (A × B) - card (C ∩ (A × B)),True,1,25.158479928970337,gemini:gemini-3-flash-preview,False,38,2
+set (takeWhile P xs) ⊆ set xs,True,1,19.486405849456787,gemini:gemini-3-flash-preview,False,40,2
+rev (drop n xs) = take (length xs - n) (rev xs) ⟷ n ≤ length xs,False,2,205.23046803474426,gemini:gemini-3-flash-preview,True,88,3
+finite A ⟹ finite B ⟹ A ∩ B = {} ⟹ card (A ∪ B) = card A + card B,True,1,15.453312873840332,gemini:gemini-3-flash-preview,False,90,2
+trans r ⟹ r O r ⊆ r,True,1,16.883233070373535,gemini:gemini-3-flash-preview,False,92,2
+"acyclic r ⟷ (∀x. (x,x) ∉ trancl r)",True,1,18.01778221130371,gemini:gemini-3-flash-preview,False,94,2
+rev (take n xs) = drop (length xs - n) (rev xs) ⟷ n ≤ length xs,False,2,207.2843680381775,gemini:gemini-3-flash-preview,True,142,3
+({x. P x} ∩ {x. Q x}) = {x. P x ∧ Q x},True,1,14.832507133483887,gemini:gemini-3-flash-preview,False,144,2
+trancl Id = Id,True,1,17.14665412902832,gemini:gemini-3-flash-preview,False,146,2
+set [m..<n] ∩ set [n..<p] = {},True,1,20.060313940048218,gemini:gemini-3-flash-preview,False,148,2
+¬ i < length xs ⟹ nth (xs @ ys) i = nth ys (i - length xs),True,1,18.194554090499878,gemini:gemini-3-flash-preview,False,150,2
+vimage f (A ∩ B) = vimage f A ∩ vimage f B,True,1,14.932610034942627,gemini:gemini-3-flash-preview,False,152,2
+finite I ⟹ (∀i∈I. finite (F i)) ⟹ (∀i∈I. ∀j∈I. i≠j ⟶ F i ∩ F j = {}) ⟹ card (⋃i∈I. F i) = (∑i∈I. card (F i)),False,1,127.33834910392761,gemini:gemini-3-flash-preview,False,176,1
+finite A ⟹ (∀x∈A. f x = g x) ⟶ sum f A = (sum g A::int),True,1,15.67125391960144,gemini:gemini-3-flash-preview,False,178,2
+finite A ⟹ inj_on f A ⟹ card (SIGMA x∈A. {f x}) = card A,False,1,49.60301089286804,gemini:gemini-3-flash-preview,False,192,1
+(a::int) - b = a + (-b),True,1,17.419676065444946,gemini:gemini-3-flash-preview,False,194,2
+rotate (length xs mod (length xs)) xs = xs,True,1,19.81872797012329,gemini:gemini-3-flash-preview,False,196,2
+converse (trancl r) = trancl (converse r),True,1,15.000066995620728,gemini:gemini-3-flash-preview,False,198,2
+zip (take n xs) (take n ys) = take n (zip xs ys),True,1,14.659295082092285,gemini:gemini-3-flash-preview,False,200,2
+finite A ⟹ finite B ⟹ A ⊆ B ⟹ card B = card A + card (B - A),True,1,21.800420999526978,gemini:gemini-3-flash-preview,False,202,2
+length (zip xs ys) = min (length xs) (length ys),True,1,17.613778114318848,gemini:gemini-3-flash-preview,False,204,2
+finite A ⟹ card (A × {x}) = card A,True,1,15.236078977584839,gemini:gemini-3-flash-preview,False,206,2
+finite A ⟹ card (A ∪ B) = card A + card (B - A),False,1,86.92681074142456,gemini:gemini-3-flash-preview,False,220,1
+rtrancl r O rtrancl r = rtrancl r,True,1,19.487317085266113,gemini:gemini-3-flash-preview,False,222,2
+inj f ⟹ inv f ∘ f = id,True,1,14.947222232818604,gemini:gemini-3-flash-preview,False,224,2
+(λx. x) ∘ f = f,True,1,35.95232009887695,gemini:gemini-3-flash-preview,False,226,2
+nth (map f xs) i = f (nth xs i) ⟷ i < length xs,False,2,200.79253768920898,gemini:gemini-3-flash-preview,False,268,2
+"{(x,y)∈A×B. P x ∧ Q y} = (A ∩ {x. P x}) × (B ∩ {y. Q y})",True,1,15.460667848587036,gemini:gemini-3-flash-preview,False,270,2
+(min (a::int) b) + (max a b) = a + b,True,1,18.333182096481323,gemini:gemini-3-flash-preview,False,272,2
+Range (r O s) ⊆ Range s,True,1,15.24882984161377,gemini:gemini-3-flash-preview,False,274,2
+map fst (zip xs ys) = take (min (length xs) (length ys)) xs,True,1,15.659286975860596,gemini:gemini-3-flash-preview,False,276,2
+finite A ⟹ card {x∈A. P x} + card {x∈A. ¬ P x} = card A,False,1,112.35618472099304,gemini:gemini-3-flash-preview,False,300,1
+finite A ⟹ card {x∈A. x∈B} = card (A ∩ B),True,1,17.588510990142822,gemini:gemini-3-flash-preview,False,302,2
+finite A ⟹ card (insert x A) = (if x∈A then card A else Suc (card A)),True,1,16.358498096466064,gemini:gemini-3-flash-preview,False,304,2
+inj_on f A ⟹ vimage f (f ` A) ∩ A = A,True,1,17.068353176116943,gemini:gemini-3-flash-preview,False,306,2
+f ` (A - B) ⊆ (f ` A) - (f ` (A ∩ B)),False,2,204.87121200561523,gemini:gemini-3-flash-preview,False,359,2
+finite A ⟹ sum (λx. (if x∈A then (0::int) else 0)) A = 0,True,1,15.553421020507812,gemini:gemini-3-flash-preview,False,361,2
+(g ∘ f) x = g (f x),True,1,14.337327241897583,gemini:gemini-3-flash-preview,False,363,2
+(∀x. f x = g x) ⟹ f = g,True,1,15.31041932106018,gemini:gemini-3-flash-preview,False,365,2
+surj f ⟹ f ∘ inv f = id,True,1,17.02695918083191,gemini:gemini-3-flash-preview,False,368,2
+(∃!x. P x) ⟶ (∀x y. P x ∧ P y ⟶ x = y),True,1,14.953556299209595,gemini:gemini-3-flash-preview,False,370,2
+finite A ⟹ card ({x} × A) = card A,True,1,15.333422183990479,gemini:gemini-3-flash-preview,False,372,2
+(min (m::nat) n) + (max m n) = m + n,True,1,17.24514102935791,gemini:gemini-3-flash-preview,False,374,2
+({x. P x} ∪ {x. Q x}) = {x. P x ∨ Q x},True,1,17.358729124069214,gemini:gemini-3-flash-preview,False,376,2
+(∀x. P x) ⟶ ((∀x. Q x ⟶ R x) ⟶ (∀x. P x ∧ Q x ⟶ R x)),True,1,15.620532989501953,gemini:gemini-3-flash-preview,False,378,2
+Domain (r O s) ⊆ Domain r,True,1,15.598851919174194,gemini:gemini-3-flash-preview,False,380,2
+finite A ⟹ sum (λx. (if x∈B then (1::nat) else 0)) A = card (A ∩ B),False,1,95.6924319267273,gemini:gemini-3-flash-preview,False,394,1
+vimage f (A ∪ B) = vimage f A ∪ vimage f B,True,1,17.532856941223145,gemini:gemini-3-flash-preview,False,396,2
+inj_on f A ⟹ x∈A ⟹ inv_into A f (f x) = x,True,1,15.152953863143921,gemini:gemini-3-flash-preview,False,398,2
+sum_list (map f (xs @ ys)) = sum_list (map f xs) + sum_list (map f ys),True,1,15.147907733917236,gemini:gemini-3-flash-preview,False,400,2
+finite A ⟹ card (A - {x}) = (if x∈A then card A - 1 else card A),True,1,14.957358121871948,gemini:gemini-3-flash-preview,False,402,2
+(λx. c) ∘ f = (λ_. c),True,1,15.151104927062988,gemini:gemini-3-flash-preview,False,404,2
+"finite A ⟹ finite B ⟹ card { (x,y)∈A×B. P x ∧ Q y } ≤ card A * card B",False,2,201.58431100845337,gemini:gemini-3-flash-preview,False,437,2
+(if A then (B ⟶ C) else True) ⟷ (¬ A ∨ (B ⟶ C)),True,1,14.635672092437744,gemini:gemini-3-flash-preview,False,439,2
+(∀x. f x = g x) ⟶ (∃!x. f x = a) ⟶ (∃!x. g x = a),True,1,14.685239791870117,gemini:gemini-3-flash-preview,False,441,2
+(∀x∈A. f x = g x) ⟹ f ` A = g ` A,True,1,15.445501327514648,gemini:gemini-3-flash-preview,False,443,2
+xs ≠ [] ⟹ nth (rev xs) i = nth xs (length xs - Suc i) ⟷ i < length xs,False,2,205.54817914962769,gemini:gemini-3-flash-preview,True,496,3
+finite A ⟹ sum (λx. c::int) A = c * int (card A),True,1,19.959968328475952,gemini:gemini-3-flash-preview,False,498,2
+set (dropWhile P xs) ⊆ set xs,True,1,19.829315900802612,gemini:gemini-3-flash-preview,False,501,2
+{x∈A. P x} ∩ {x∈A. ¬ P x} = {},True,1,14.541656970977783,gemini:gemini-3-flash-preview,False,503,2
+sum (λi. (k::nat)) {..<m} = m * k,True,1,15.94234323501587,gemini:gemini-3-flash-preview,False,505,2
+finite A ⟹ sum (λx. f x + g x::int) A = sum f A + sum g A,True,1,21.030544757843018,gemini:gemini-3-flash-preview,False,508,2
+(∀x. P x ⟶ Q x) ∧ (∃x. P x) ⟶ (∃x. Q x),True,1,16.019068956375122,gemini:gemini-3-flash-preview,False,510,2
+sum (λ_. (1::nat)) {..<m} = m,True,1,17.57157588005066,gemini:gemini-3-flash-preview,False,512,2
+r ⊆ s ⟹ trancl r ⊆ trancl s,True,1,19.190361738204956,gemini:gemini-3-flash-preview,False,515,2
+length [m..<n] + length [n..<p] = length [m..<p],False,2,130.09092807769775,gemini:gemini-3-flash-preview,False,545,2
+Domain (converse r) = Range r,True,1,16.818854093551636,gemini:gemini-3-flash-preview,False,547,2
+foldr f b (xs @ ys) = foldr f (foldr f b ys) xs,False,3,210.97483277320862,gemini:gemini-3-flash-preview,False,595,3
+finite A ⟹ finite B ⟹ card ((A - C) × (B - D)) = (card A - card (A ∩ C)) * (card B - card (B ∩ D)),True,2,82.55756688117981,gemini:gemini-3-flash-preview,False,613,3
+map f (drop n xs) = drop n (map f xs),True,1,15.420151710510254,gemini:gemini-3-flash-preview,False,615,2
+zip (drop n xs) (drop n ys) = drop n (zip xs ys),True,1,15.50325894355774,gemini:gemini-3-flash-preview,False,617,2
+length (takeWhile P xs) + length (dropWhile P xs) = length xs,True,1,16.50703191757202,gemini:gemini-3-flash-preview,False,619,2
+f ∘ (λx. x) = f,True,1,31.222668170928955,gemini:gemini-3-flash-preview,False,623,2
+finite A ⟹ card (SIGMA x∈A. F x) = sum (λx. card (F x)) A,False,1,50.44128203392029,gemini:gemini-3-flash-preview,False,637,1
+finite A ⟹ card (A ∩ B) = card A - card (A - B),True,1,22.47761106491089,gemini:gemini-3-flash-preview,False,639,2
+foldl f a (xs @ ys) = foldl f (foldl f a xs) ys,True,1,16.952813863754272,gemini:gemini-3-flash-preview,False,641,2
+abs ((a::int) - c) ≤ abs (a - b) + abs (b - c),True,1,17.360974073410034,gemini:gemini-3-flash-preview,False,643,2
+(if A then f x else f y) = f (if A then x else y),True,1,15.147576093673706,gemini:gemini-3-flash-preview,False,645,2
+Range (converse r) = Domain r,True,1,15.906679153442383,gemini:gemini-3-flash-preview,False,647,2
+nth (xs @ ys) i = nth xs i ⟷ i < length xs,False,2,205.64005613327026,gemini:gemini-3-flash-preview,True,695,3
+finite A ⟹ card {x∈A. P x ∧ Q x} + card {x∈A. P x ∧ ¬ Q x} = card {x∈A. P x},False,1,112.69609498977661,gemini:gemini-3-flash-preview,False,719,1
+sum_list (replicate n k) = n * k,True,1,20.854148149490356,gemini:gemini-3-flash-preview,False,721,2
+map snd (zip xs ys) = take (min (length xs) (length ys)) ys,True,1,17.046224117279053,gemini:gemini-3-flash-preview,False,723,2
+finite A ⟹ inj_on f A ⟹ card (f ` A) = card A,True,1,14.460312128067017,gemini:gemini-3-flash-preview,False,725,2
+finite A ⟹ sum (λx. (if P x then (1::nat) else 0)) A = card {x∈A. P x},False,1,65.97675490379333,gemini:gemini-3-flash-preview,False,739,1
+finite A ⟹ card (A ∪ B) + card (A ∩ B) = card A + card B,False,1,66.16778612136841,gemini:gemini-3-flash-preview,False,753,1
+finite A ⟹ inj_on f A ⟹ sum (λx. (1::nat)) (f ` A) = card A,True,1,19.972952842712402,gemini:gemini-3-flash-preview,False,756,2
+finite A ⟹ finite B ⟹ (A ⊆ B) ⟷ (card A = card (A ∩ B)),True,1,20.397222995758057,gemini:gemini-3-flash-preview,False,758,2
+(map Suc [m..<n]) = [Suc m ..< Suc n],True,1,17.243903875350952,gemini:gemini-3-flash-preview,False,761,2
+(∃x. P x ∧ (Q x ⟶ R x)) ⟶ ((∃x. P x ∧ Q x) ⟶ (∃x. R x)),False,2,200.7770369052887,gemini:gemini-3-flash-preview,False,817,2
+finite A ⟹ card ((A × B) ∩ (C × D)) = card (A ∩ C) * card (B ∩ D),True,1,17.032855987548828,gemini:gemini-3-flash-preview,False,819,2
+rotate (i + j) xs = rotate i (rotate j xs),True,1,15.55050015449524,gemini:gemini-3-flash-preview,False,821,2

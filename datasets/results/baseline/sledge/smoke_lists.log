@@ -1,0 +1,44 @@
+/Users/will/CS/2026/3806/Assignment2/llm-isabelle/baselines/sledge_only.py:15: SyntaxWarning: invalid escape sequence '\<'
+  - Converts Unicode (∈ ∪ ⟹ λ etc.) to Isabelle escapes (\<in> \<union> \<Longrightarrow> \<lambda> …).
+=== Sledgehammer-only (standalone) ===
+Goals: 18 | imports: Main | sledge-timeout: 30s | goal-timeout: 90s
+[1/18] rev (rev xs) = xs
+  -> OK    (9.15s)  by simp
+[2/18] xs @ [] = xs
+  -> OK    (9.10s)  by simp
+[3/18] [] @ xs = xs
+  -> OK    (9.35s)  by simp
+[4/18] rev (xs @ ys) = rev ys @ rev xs
+  -> OK    (8.78s)  by simp
+[5/18] map id xs = xs
+  -> OK    (9.40s)  by simp
+[6/18] map f (xs @ ys) = map f xs @ map f ys
+  -> OK    (9.18s)  by simp
+[7/18] map f (rev xs) = rev (map f xs)
+  -> OK    (9.12s)  by (simp add: rev_map)
+[8/18] length (xs @ ys) = length xs + length ys
+  -> OK    (9.18s)  by simp
+[9/18] length (rev xs) = length xs
+  -> OK    (9.17s)  by simp
+[10/18] take (length xs) (xs @ ys) = xs
+  -> OK    (8.75s)  by simp
+[11/18] drop (length xs) (xs @ ys) = ys
+  -> OK    (9.18s)  by simp
+[12/18] take n xs @ drop n xs = xs
+  -> OK    (9.27s)  by simp
+[13/18] set (xs @ ys) = set xs ∪ set ys
+  -> OK    (9.22s)  by simp
+[14/18] x ∈ set xs ⟹ x ∈ set (xs @ ys)
+  -> OK    (12.12s)  by simp
+[15/18] x ∈ set ys ⟹ x ∈ set (xs @ ys)
+  -> OK    (12.49s)  by simp
+[16/18] distinct xs ⟹ distinct (rev xs)
+  -> OK    (9.15s)  by simp
+[17/18] filter p (xs @ ys) = filter p xs @ filter p ys
+  -> OK    (9.43s)  using filter_append by blast
+[18/18] map f (filter p xs) = filter (λx. p x) (map f xs)
+  -> FAIL  (34.90s)
+
+=== Summary ===
+Success: 17/18 (94.4%)
+Median time: 9.18s | Average time: 10.94s

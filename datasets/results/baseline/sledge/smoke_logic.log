@@ -1,0 +1,18 @@
+/Users/will/CS/2026/3806/Assignment2/llm-isabelle/baselines/sledge_only.py:15: SyntaxWarning: invalid escape sequence '\<'
+  - Converts Unicode (∈ ∪ ⟹ λ etc.) to Isabelle escapes (\<in> \<union> \<Longrightarrow> \<lambda> …).
+=== Sledgehammer-only (standalone) ===
+Goals: 5 | imports: Main | sledge-timeout: 30s | goal-timeout: 90s
+[1/5] (True ∧ P) ⟷ P
+  -> OK    (9.28s)  by simp
+[2/5] (P ∧ True) ⟷ P
+  -> OK    (9.09s)  by simp
+[3/5] (P ∨ False) ⟷ P
+  -> OK    (8.84s)  by simp
+[4/5] (¬ ¬ P) ⟷ P
+  -> OK    (8.28s)  by simp
+[5/5] (P ⟶ Q) ⟷ (¬ P ∨ Q)
+  -> OK    (8.20s)  by simp
+
+=== Summary ===
+Success: 5/5 (100.0%)
+Median time: 8.84s | Average time: 8.74s

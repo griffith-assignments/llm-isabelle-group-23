@@ -1,0 +1,1209 @@
+server "isabelle" = 127.0.0.1:60446 (password "cb716c66-9816-4a78-8b91-aad59b9ced22")
+session_id: 32a6c1de-29db-4708-9219-452e75826e5e
+\n=== Running suite: hol_main_mid_goals_test (100 goals) ===
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [1/100] trancl (r ∪ s) = trancl (trancl r ∪ trancl s)
+
+▶ Goal: trancl (r ∪ s) = trancl (trancl r ∪ trancl s)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by (metis sup_commute trancl_trancl_Un)', 'by (metis inf_sup_aci(5)', 'by (metis {"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Duplicate proof","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"e: Duplicate proof","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"spass: Duplicate proof","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"vampire: Try this: by (metis inf_sup_aci(5) trancl_trancl_Un) (59 ms)","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"theorem (?r \\\\<union> ?s)\\\\<^sup>+ = (?r\\\\<^sup>+ \\\\<union> ?s\\\\<^sup>+)\\\\<^sup>+","pos":{"line":6,"offset":121,"end_offset":126,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}],"task":"1f4864c9-1870-43c0-8541-3579eff0c2a9"})']
+Finishers (origin): [sledge:by (metis sup_commute trancl_trancl_Un), sledge:by (metis inf_sup_aci(5), sledge:by (metis {"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Duplicate proof","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"e: Duplicate proof","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"spass: Duplicate proof","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"vampire: Try this: by (metis inf_sup_aci(5) trancl_trancl_Un) (59 ms)","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}},{"kind":"writeln","message":"theorem (?r \\<union> ?s)\\<^sup>+ = (?r\\<^sup>+ \\<union> ?s\\<^sup>+)\\<^sup>+","pos":{"line":6,"offset":121,"end_offset":126,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpzndo6_cv/Scratch.thy"}],"task":"1f4864c9-1870-43c0-8541-3579eff0c2a9"}), llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by (metis sup_commute trancl_trancl_Un)  (2240ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [2/100] r ⊆ s ⟹ rtrancl r ⊆ rtrancl s
+
+▶ Goal: r ⊆ s ⟹ rtrancl r ⊆ rtrancl s
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by (metis rtrancl_mono)', 'by auto', 'by (simp add: rtrancl_mono)', 'by (metis {"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"auto found a proof...","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis rtrancl_mono) (1 ms)","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"auto: Try this: using rtrancl_mono by auto (0.8 ms)","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (simp add: rtrancl_mono) (2 ms)","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"vampire found a proof...","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"vampire: Duplicate proof","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"theorem ?r \\\\<subseteq> ?s \\\\<Longrightarrow> ?r\\\\<^sup>* \\\\<subseteq> ?s\\\\<^sup>*","pos":{"line":6,"offset":105,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}],"task":"59dc1fd1-654a-4363-9335-6f5e954b1065"})', 'by simp add: rtrancl_mono']
+Finishers (origin): [sledge:by (metis rtrancl_mono), sledge:by auto, sledge:by (simp add: rtrancl_mono), sledge:by (metis {"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"auto found a proof...","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis rtrancl_mono) (1 ms)","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"auto: Try this: using rtrancl_mono by auto (0.8 ms)","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (simp add: rtrancl_mono) (2 ms)","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"vampire found a proof...","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"vampire: Duplicate proof","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":75,"end_offset":87,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}},{"kind":"writeln","message":"theorem ?r \\<subseteq> ?s \\<Longrightarrow> ?r\\<^sup>* \\<subseteq> ?s\\<^sup>*","pos":{"line":6,"offset":105,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp1bpunhfs/Scratch.thy"}],"task":"59dc1fd1-654a-4363-9335-6f5e954b1065"}), sledge:by simp add: rtrancl_mono, llm:by simp, llm:by clarsimp, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by (metis rtrancl_mono)  (2237ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [3/100] case_sum f g (Inl x) = f x
+
+▶ Goal: case_sum f g (Inl x) = f x
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis old.sum.simps(5)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis old.sum.simps(5), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2220ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [4/100] ((P ⟶ Q) ∧ (Q ⟶ R)) ⟶ (P ⟶ R)
+
+▶ Goal: ((P ⟶ Q) ∧ (Q ⟶ R)) ⟶ (P ⟶ R)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by satx', 'by presburger', 'by simp', 'by blast', 'by fastforce']
+Finishers (origin): [sledge:by satx, sledge:by presburger, sledge:by simp, sledge:by blast, sledge:by fastforce, llm:by clarsimp, llm:by auto, llm:by arith, llm:by meson]
+  finish ✓ [sledge] by satx  (2225ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [5/100] (m + n) - n = m
+
+▶ Goal: (m + n) - n = m
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2231ms)
+  finish × [llm] by clarsimp  (2111ms)
+  finish × [llm] by auto  (2107ms)
+  finish × [llm] by fastforce  (2107ms)
+  finish × [llm] by blast  (2120ms)
+  finish × [llm] by arith  (2040ms)
+  finish × [llm] by presburger  (2188ms)
+  finish × [llm] by meson  (2118ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2224ms)
+  step  × [llm] apply auto (2036ms)
+  step  × [llm] apply simp (2187ms)
+  step  × [llm] apply clarsimp (2117ms)
+  step  × [llm] apply (cases xs) (2113ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [6/100] rev (rev xs) = xs
+
+▶ Goal: rev (rev xs) = xs
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis rev_rev_ident)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis rev_rev_ident), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2221ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [7/100] (∃x. P x ∧ Q x) ⟶ (∃x. P x)
+
+▶ Goal: (∃x. P x ∧ Q x) ⟶ (∃x. P x)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by blast', 'by auto', 'by fast', 'by fastforce', 'by force']
+Finishers (origin): [sledge:by blast, sledge:by auto, sledge:by fast, sledge:by fastforce, sledge:by force, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by blast  (2227ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [8/100] 0 < n ⟶ m div n * n ≤ m
+
+▶ Goal: 0 < n ⟶ m div n * n ≤ m
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2240ms)
+  finish × [llm] by clarsimp  (2121ms)
+  finish × [llm] by auto  (2123ms)
+  finish × [llm] by fastforce  (2123ms)
+  finish × [llm] by blast  (2121ms)
+  finish × [llm] by arith  (2113ms)
+  finish × [llm] by presburger  (2112ms)
+  finish × [llm] by meson  (2112ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2224ms)
+  step  ✓ [llm] apply auto n_sub=1 (2114ms)
+  step  × [llm] apply simp (2106ms)
+  step  ✓ [llm] apply clarsimp n_sub=1 (2115ms)
+  step  × [llm] apply (cases xs) (2118ms)
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2239ms)
+  finish × [llm] by clarsimp  (2123ms)
+  finish × [llm] by auto  (2044ms)
+  finish × [llm] by fastforce  (2177ms)
+  finish × [llm] by blast  (2122ms)
+  finish × [llm] by arith  (2118ms)
+  finish × [llm] by presburger  (2114ms)
+  finish × [llm] by meson  (2114ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [9/100] (A ∩ (B ∪ C)) = (A ∩ B) ∪ (A ∩ C)
+
+▶ Goal: (A ∩ (B ∪ C)) = (A ∩ B) ∪ (A ∩ C)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by blast', 'by fast', 'by auto', 'by fastforce', 'by force']
+Finishers (origin): [sledge:by blast, sledge:by fast, sledge:by auto, sledge:by fastforce, sledge:by force, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by blast  (2231ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [10/100] (a::int) ≤ b ∨ b ≤ a
+
+▶ Goal: (a::int) ≤ b ∨ b ≤ a
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by linarith', 'by auto', 'by fastforce', 'by force', 'by presburger']
+Finishers (origin): [sledge:by linarith, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by presburger, llm:by simp, llm:by clarsimp, llm:by blast, llm:by arith, llm:by meson]
+  finish ✓ [sledge] by linarith  (2221ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [11/100] abs (a::int) ≥ 0
+
+▶ Goal: abs (a::int) ≥ 0
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by auto', 'by simp', 'by fastforce', 'by linarith', 'by force']
+Finishers (origin): [sledge:by auto, sledge:by simp, sledge:by fastforce, sledge:by linarith, sledge:by force, llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by auto  (2221ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [12/100] (P ∧ (Q ∨ R)) ⟶ ((P ∧ Q) ∨ (P ∧ R))
+
+▶ Goal: (P ∧ (Q ∨ R)) ⟶ ((P ∧ Q) ∨ (P ∧ R))
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by satx', 'by presburger', 'by linarith', 'by simp', 'by argo']
+Finishers (origin): [sledge:by satx, sledge:by presburger, sledge:by linarith, sledge:by simp, sledge:by argo, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by meson]
+  finish ✓ [sledge] by satx  (2237ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [13/100] rev (map f xs) = map f (rev xs)
+
+▶ Goal: rev (map f xs) = map f (rev xs)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by (metis rev_map)', 'by (simp add: rev_map)', 'by blast', 'by (metis {"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis rev_map) (1 ms)","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"zipperposition found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"zipperposition found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"e found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"vampire found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"verit found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"e: Try this: by (simp add: rev_map) (1 ms)","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"zipperposition: Try this: using rev_map by blast (1 ms)","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"zipperposition: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"verit: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"vampire: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"spass found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"spass: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"theorem rev (map ?f ?xs) = map ?f (rev ?xs)","pos":{"line":6,"offset":107,"end_offset":112,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}],"task":"f21429e2-9186-4b1f-bb29-f61e956dfa09"})', 'by simp add: rev_map']
+Finishers (origin): [sledge:by (metis rev_map), sledge:by (simp add: rev_map), sledge:by blast, sledge:by (metis {"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis rev_map) (1 ms)","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"zipperposition found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"zipperposition found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"e found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"vampire found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"verit found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"e: Try this: by (simp add: rev_map) (1 ms)","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"zipperposition: Try this: using rev_map by blast (1 ms)","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"zipperposition: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"verit: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"vampire: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"spass found a proof...","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"spass: Duplicate proof","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":77,"end_offset":89,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}},{"kind":"writeln","message":"theorem rev (map ?f ?xs) = map ?f (rev ?xs)","pos":{"line":6,"offset":107,"end_offset":112,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpiq8vsgy4/Scratch.thy"}],"task":"f21429e2-9186-4b1f-bb29-f61e956dfa09"}), sledge:by simp add: rev_map, llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by (metis rev_map)  (2232ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [14/100] length (rev xs) = length xs
+
+▶ Goal: length (rev xs) = length xs
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis length_rev)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis length_rev), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2238ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [15/100] n ≤ m ⟶ m - (m - n) = n
+
+▶ Goal: n ≤ m ⟶ m - (m - n) = n
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2233ms)
+  finish × [llm] by clarsimp  (2117ms)
+  finish × [llm] by auto  (2109ms)
+  finish × [llm] by fastforce  (2124ms)
+  finish × [llm] by blast  (2114ms)
+  finish × [llm] by arith  (2122ms)
+  finish × [llm] by presburger  (2116ms)
+  finish × [llm] by meson  (2124ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2236ms)
+  step  ✓ [llm] apply auto n_sub=1 (2112ms)
+  step  × [llm] apply simp (2125ms)
+  step  ✓ [llm] apply clarsimp n_sub=1 (2114ms)
+  step  × [llm] apply (cases xs) (2112ms)
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2241ms)
+  finish × [llm] by clarsimp  (2038ms)
+  finish × [llm] by auto  (2178ms)
+  finish × [llm] by fastforce  (2115ms)
+  finish × [llm] by blast  (2113ms)
+  finish × [llm] by arith  (2116ms)
+  finish × [llm] by presburger  (2112ms)
+  finish × [llm] by meson  (2120ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [16/100] rev (xs @ ys) = rev ys @ rev xs
+
+▶ Goal: rev (xs @ ys) = rev ys @ rev xs
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis rev_append)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis rev_append), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2238ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [17/100] take (length xs) (xs @ ys) = xs
+
+▶ Goal: take (length xs) (xs @ ys) = xs
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by force', 'by fastforce', 'by (metis append_eq_conv_conj)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by force, sledge:by fastforce, sledge:by (metis append_eq_conv_conj), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2236ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [18/100] case_sum f g (Inr y) = g y
+
+▶ Goal: case_sum f g (Inr y) = g y
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis old.sum.simps(6)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis old.sum.simps(6), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2228ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [19/100] abs (-a) = abs a
+
+▶ Goal: abs (-a) = abs a
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2234ms)
+  finish × [llm] by clarsimp  (2044ms)
+  finish × [llm] by auto  (2180ms)
+  finish × [llm] by fastforce  (2126ms)
+  finish × [llm] by blast  (2123ms)
+  finish × [llm] by arith  (2126ms)
+  finish × [llm] by presburger  (2114ms)
+  finish × [llm] by meson  (2124ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2236ms)
+  step  × [llm] apply auto (2117ms)
+  step  × [llm] apply simp (2118ms)
+  step  × [llm] apply clarsimp (2118ms)
+  step  × [llm] apply (cases xs) (2119ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [20/100] (Id O r) = r
+
+▶ Goal: (Id O r) = r
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by force', 'by fastforce', 'by fast']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by force, sledge:by fastforce, sledge:by fast, llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2236ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [21/100] finite A ⟹ card (insert a A) = (if a∈A then card A else Suc (card A))
+
+▶ Goal: finite A ⟹ card (insert a A) = (if a∈A then card A else Suc (card A))
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by (metis card_insert_if)', 'by fastforce', 'by (simp add: insert_absorb)', 'by (metis {"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis card_insert_if) (6 ms)","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this: using card_insert_if by fastforce (6 ms)","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this:\\n using card.insert_remove card.remove by fastforce (29 ms)","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (simp add: insert_absorb) (1 ms)","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"theorem\\n finite ?A \\\\<Longrightarrow>\\n card (insert ?a ?A) = (if ?a \\\\<in> ?A then card ?A else Suc (card ?A))","pos":{"line":6,"offset":145,"end_offset":150,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}],"task":"19abfb43-e022-4bd8-beab-7855c0dbc7fd"})', 'by simp add: insert_absorb']
+Finishers (origin): [sledge:by (metis card_insert_if), sledge:by fastforce, sledge:by (simp add: insert_absorb), sledge:by (metis {"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis card_insert_if) (6 ms)","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this: using card_insert_if by fastforce (6 ms)","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this:\n using card.insert_remove card.remove by fastforce (29 ms)","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (simp add: insert_absorb) (1 ms)","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":115,"end_offset":127,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}},{"kind":"writeln","message":"theorem\n finite ?A \\<Longrightarrow>\n card (insert ?a ?A) = (if ?a \\<in> ?A then card ?A else Suc (card ?A))","pos":{"line":6,"offset":145,"end_offset":150,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpy5_m2kto/Scratch.thy"}],"task":"19abfb43-e022-4bd8-beab-7855c0dbc7fd"}), sledge:by simp add: insert_absorb, llm:by simp, llm:by clarsimp, llm:by auto, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by (metis card_insert_if)  (2222ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [22/100] (A ⊆ B ∧ B ⊆ C) ⟶ (A ⊆ C)
+
+▶ Goal: (A ⊆ B ∧ B ⊆ C) ⟶ (A ⊆ C)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by blast', 'by auto', 'by fast', 'by fastforce', 'by force']
+Finishers (origin): [sledge:by blast, sledge:by auto, sledge:by fast, sledge:by fastforce, sledge:by force, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by blast  (2227ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [23/100] A ⊆ f -` (f ` A)
+
+▶ Goal: A ⊆ f -` (f ` A)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by blast', 'by fast', 'by auto', 'by fastforce', 'by force']
+Finishers (origin): [sledge:by blast, sledge:by fast, sledge:by auto, sledge:by fastforce, sledge:by force, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by blast  (2236ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [24/100] map_sum f g (Inl x) = Inl (f x)
+
+▶ Goal: map_sum f g (Inl x) = Inl (f x)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by auto', 'by simp', 'by fastforce', 'by force', 'by (metis map_sum.simps(1)']
+Finishers (origin): [sledge:by auto, sledge:by simp, sledge:by fastforce, sledge:by force, sledge:by (metis map_sum.simps(1), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by auto  (2229ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [25/100] (a::nat) ≤ b ⟶ a ≤ b + c
+
+▶ Goal: (a::nat) ≤ b ⟶ a ≤ b + c
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by fastforce', 'by linarith', 'by auto', 'by force']
+Finishers (origin): [sledge:by simp, sledge:by fastforce, sledge:by linarith, sledge:by auto, sledge:by force, llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2236ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [26/100] drop (length xs) (xs @ ys) = ys
+
+▶ Goal: drop (length xs) (xs @ ys) = ys
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by auto', 'by simp', 'by fastforce', 'by force', 'by (metis append_eq_conv_conj)']
+Finishers (origin): [sledge:by auto, sledge:by simp, sledge:by fastforce, sledge:by force, sledge:by (metis append_eq_conv_conj), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by auto  (2230ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [27/100] (a::nat) ≤ b ⟶ a div c ≤ b div c ∨ c=0
+
+▶ Goal: (a::nat) ≤ b ⟶ a div c ≤ b div c ∨ c=0
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by (metis div_le_mono)', 'by fastforce', 'by (metis {"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"simp found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"auto found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"simp found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"simp: Try this: using div_le_mono by simp (0.6 ms)","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"simp: Duplicate proof","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"auto: Try this: using div_le_mono by auto (0.6 ms)","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis div_le_mono) (1 ms)","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this: using div_le_mono by fastforce (2 ms)","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Duplicate proof","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"theorem ?a \\\\<le> ?b \\\\<longrightarrow> ?a div ?c \\\\<le> ?b div ?c \\\\<or> ?c = 0","pos":{"line":6,"offset":114,"end_offset":119,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}],"task":"82c64edf-6f3a-4ade-9744-85418d6886b5"})']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by (metis div_le_mono), sledge:by fastforce, sledge:by (metis {"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"simp found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"auto found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"simp found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"simp: Try this: using div_le_mono by simp (0.6 ms)","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"simp: Duplicate proof","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"auto: Try this: using div_le_mono by auto (0.6 ms)","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis div_le_mono) (1 ms)","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this: using div_le_mono by fastforce (2 ms)","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Duplicate proof","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":84,"end_offset":96,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}},{"kind":"writeln","message":"theorem ?a \\<le> ?b \\<longrightarrow> ?a div ?c \\<le> ?b div ?c \\<or> ?c = 0","pos":{"line":6,"offset":114,"end_offset":119,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmph1quareu/Scratch.thy"}],"task":"82c64edf-6f3a-4ade-9744-85418d6886b5"}), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [sledge] by simp  (2217ms)
+  finish × [sledge] by auto  (2113ms)
+  finish ✓ [sledge] by (metis div_le_mono)  (2118ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [28/100] finite A ⟹ card (A - {a}) = (if a∈A then card A - 1 else card A)
+
+▶ Goal: finite A ⟹ card (A - {a}) = (if a∈A then card A - 1 else card A)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by fastforce', 'by auto', 'by force', 'by (metis card_Diff_singleton_if)']
+Finishers (origin): [sledge:by simp, sledge:by fastforce, sledge:by auto, sledge:by force, sledge:by (metis card_Diff_singleton_if), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2233ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [29/100] (a,b) = (c,d) ⟶ a=c ∧ b=d
+
+▶ Goal: (a,b) = (c,d) ⟶ a=c ∧ b=d
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fast', 'by blast', 'by fastforce']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fast, sledge:by blast, sledge:by fastforce, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2231ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [30/100] (f ` A) ∩ (f ` B) ⊆ f ` (A ∩ B)
+
+▶ Goal: (f ` A) ∩ (f ` B) ⊆ f ` (A ∩ B)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2241ms)
+  finish × [llm] by clarsimp  (2117ms)
+  finish × [llm] by auto  (2127ms)
+  finish × [llm] by fastforce  (2116ms)
+  finish × [llm] by blast  (600218ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [31/100] (∃x. P x) ⟶ (∃y. P y ∧ ∃z. P z)
+
+▶ Goal: (∃x. P x) ⟶ (∃y. P y ∧ ∃z. P z)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2246ms)
+  finish × [llm] by clarsimp  (2115ms)
+  finish × [llm] by auto  (2120ms)
+  finish × [llm] by fastforce  (2116ms)
+  finish × [llm] by blast  (2125ms)
+  finish × [llm] by arith  (2125ms)
+  finish × [llm] by presburger  (2123ms)
+  finish × [llm] by meson  (2125ms)
+Proposals (origin): [llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs), llm:apply (induction xs)]
+  step  × [llm] apply auto (2117ms)
+  step  × [llm] apply simp (2126ms)
+  step  × [llm] apply clarsimp (2118ms)
+  step  × [llm] apply (cases xs) (2129ms)
+  step  × [llm] apply (induction xs) (2124ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [32/100] map f (xs @ ys) = map f xs @ map f ys
+
+▶ Goal: map f (xs @ ys) = map f xs @ map f ys
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by auto', 'by simp', 'by fastforce', 'by force', 'by (metis map_append)']
+Finishers (origin): [sledge:by auto, sledge:by simp, sledge:by fastforce, sledge:by force, sledge:by (metis map_append), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by auto  (2230ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [33/100] take n (take m xs) = take (min n m) xs
+
+▶ Goal: take n (take m xs) = take (min n m) xs
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by fastforce', 'by simp', 'by auto', 'by force', 'by (metis take_take)']
+Finishers (origin): [sledge:by fastforce, sledge:by simp, sledge:by auto, sledge:by force, sledge:by (metis take_take), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by fastforce  (2236ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [34/100] concat (map (λx. [x]) xs) = xs
+
+▶ Goal: concat (map (λx. [x]) xs) = xs
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by auto found a proof...","pos":{"line":5,"offset":76,"end_offset":88,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmphzbbojhy/Scratch.thy"}},{"kind":"writeln","message":"auto: Try this: by auto']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by auto found a proof...","pos":{"line":5,"offset":76,"end_offset":88,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmphzbbojhy/Scratch.thy"}},{"kind":"writeln","message":"auto: Try this: by auto, llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2223ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [35/100] abs (a*b) = abs a * abs b
+
+▶ Goal: abs (a*b) = abs a * abs b
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2236ms)
+  finish × [llm] by clarsimp  (2128ms)
+  finish × [llm] by auto  (2131ms)
+  finish × [llm] by fastforce  (2121ms)
+  finish × [llm] by blast  (2119ms)
+  finish × [llm] by arith  (2125ms)
+  finish × [llm] by presburger  (2122ms)
+  finish × [llm] by meson  (2112ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2264ms)
+  step  × [llm] apply auto (2111ms)
+  step  × [llm] apply simp (2127ms)
+  step  × [llm] apply clarsimp (2112ms)
+  step  × [llm] apply (cases xs) (2126ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [36/100] Range (r O s) = Range r ∩ (r `` (Range s))
+
+▶ Goal: Range (r O s) = Range r ∩ (r `` (Range s))
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2233ms)
+  finish × [llm] by clarsimp  (2126ms)
+  finish × [llm] by auto  (2130ms)
+  finish × [llm] by fastforce  (2125ms)
+  finish × [llm] by blast  (2123ms)
+  finish × [llm] by arith  (2130ms)
+  finish × [llm] by presburger  (2123ms)
+  finish × [llm] by meson  (2134ms)
+Proposals (origin): [llm:apply simp, llm:apply auto, llm:apply clarsimp, llm:apply (cases xs), llm:apply (induction xs)]
+  step  × [llm] apply simp (2344ms)
+  step  ✓ [llm] apply auto n_sub=3 (2127ms)
+  step  × [llm] apply clarsimp (2134ms)
+  step  × [llm] apply (cases xs) (2279ms)
+  step  × [llm] apply (induction xs) (2092ms)
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2248ms)
+  finish × [llm] by clarsimp  (2128ms)
+  finish × [llm] by auto  (2124ms)
+  finish × [llm] by fastforce  (2119ms)
+  finish × [llm] by blast  (2135ms)
+  finish × [llm] by arith  (6292ms)
+  finish × [llm] by presburger  (2123ms)
+  finish × [llm] by meson  (2115ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [37/100] split f (a,b) = f a b
+
+▶ Goal: split f (a,b) = f a b
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2243ms)
+  finish × [llm] by clarsimp  (2133ms)
+  finish × [llm] by auto  (2121ms)
+  finish × [llm] by fastforce  (2428ms)
+  finish × [llm] by blast  (2126ms)
+  finish × [llm] by arith  (2127ms)
+  finish × [llm] by presburger  (2124ms)
+  finish × [llm] by meson  (2125ms)
+Proposals (origin): [llm:apply simp, llm:apply auto, llm:apply clarsimp, llm:apply (cases xs), llm:apply (induction xs)]
+  step  × [llm] apply simp (2248ms)
+  step  × [llm] apply auto (2405ms)
+  step  × [llm] apply clarsimp (2180ms)
+  step  × [llm] apply (cases xs) (2076ms)
+  step  × [llm] apply (induction xs) (2115ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [38/100] map (f ∘ g) xs = map f (map g xs)
+
+▶ Goal: map (f ∘ g) xs = map f (map g xs)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by fastforce', 'by auto', 'by force', 'by simp', 'by auto found a proof...","pos":{"line":5,"offset":79,"end_offset":91,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmphk7vs_9y/Scratch.thy"}},{"kind":"writeln","message":"force found a proof...","pos":{"line":5,"offset":79,"end_offset":91,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmphk7vs_9y/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":79,"end_offset":91,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmphk7vs_9y/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this: by fastforce']
+Finishers (origin): [sledge:by fastforce, sledge:by auto, sledge:by force, sledge:by simp, sledge:by auto found a proof...","pos":{"line":5,"offset":79,"end_offset":91,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmphk7vs_9y/Scratch.thy"}},{"kind":"writeln","message":"force found a proof...","pos":{"line":5,"offset":79,"end_offset":91,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmphk7vs_9y/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":79,"end_offset":91,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmphk7vs_9y/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this: by fastforce, llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by fastforce  (2251ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [39/100] fst (a,b) = a
+
+▶ Goal: fst (a,b) = a
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis fst_conv)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis fst_conv), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2234ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [40/100] (P ∧ False) ⟶ Q
+
+▶ Goal: (P ∧ False) ⟶ Q
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by satx', 'by presburger', 'by simp', 'by auto', 'by blast']
+Finishers (origin): [sledge:by satx, sledge:by presburger, sledge:by simp, sledge:by auto, sledge:by blast, llm:by clarsimp, llm:by fastforce, llm:by arith, llm:by meson]
+  finish ✓ [sledge] by satx  (2247ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [41/100] (r O Id) = r
+
+▶ Goal: (r O Id) = r
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by force', 'by fastforce', 'by fast']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by force, sledge:by fastforce, sledge:by fast, llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2246ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [42/100] finite A ⟹ card (A ∪ B) + card (A ∩ B) = card A + card B
+
+▶ Goal: finite A ⟹ card (A ∪ B) + card (A ∩ B) = card A + card B
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2244ms)
+  finish × [llm] by clarsimp  (2120ms)
+  finish × [llm] by auto  (2132ms)
+  finish × [llm] by fastforce  (2128ms)
+  finish × [llm] by blast  (2124ms)
+  finish × [llm] by arith  (2042ms)
+  finish × [llm] by presburger  (2188ms)
+  finish × [llm] by meson  (2132ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2247ms)
+  step  × [llm] apply auto (2128ms)
+  step  × [llm] apply simp (2126ms)
+  step  × [llm] apply clarsimp (2120ms)
+  step  × [llm] apply (cases xs) (2125ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [43/100] refl r ⟹ refl (r⁻¹)
+
+▶ Goal: refl r ⟹ refl (r⁻¹)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2234ms)
+  finish × [llm] by clarsimp  (2119ms)
+  finish × [llm] by auto  (2126ms)
+  finish × [llm] by fastforce  (2132ms)
+  finish × [llm] by blast  (2126ms)
+  finish × [llm] by arith  (2116ms)
+  finish × [llm] by presburger  (2130ms)
+  finish × [llm] by meson  (2129ms)
+Proposals (origin): [llm:apply simp, llm:apply auto, llm:apply clarsimp, llm:apply (cases xs), llm:apply (induction xs)]
+  step  × [llm] apply simp (2246ms)
+  step  × [llm] apply auto (2123ms)
+  step  × [llm] apply clarsimp (2130ms)
+  step  × [llm] apply (cases xs) (2128ms)
+  step  × [llm] apply (induction xs) (2125ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [44/100] antisym r ⟹ antisym (r⁻¹)
+
+▶ Goal: antisym r ⟹ antisym (r⁻¹)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2241ms)
+  finish × [llm] by clarsimp  (2131ms)
+  finish × [llm] by auto  (2129ms)
+  finish × [llm] by fastforce  (2120ms)
+  finish × [llm] by blast  (2130ms)
+  finish × [llm] by arith  (2129ms)
+  finish × [llm] by presburger  (2122ms)
+  finish × [llm] by meson  (2129ms)
+Proposals (origin): [llm:apply simp, llm:apply auto, llm:apply clarsimp, llm:apply (cases xs), llm:apply (induction xs)]
+  step  × [llm] apply simp (2237ms)
+  step  × [llm] apply auto (2123ms)
+  step  × [llm] apply clarsimp (2131ms)
+  step  × [llm] apply (cases xs) (2133ms)
+  step  × [llm] apply (induction xs) (2125ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [45/100] (A ∩ B) ∪ (A - B) = A
+
+▶ Goal: (A ∩ B) ∪ (A - B) = A
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by blast', 'by fast', 'by fastforce', 'by auto', 'by force']
+Finishers (origin): [sledge:by blast, sledge:by fast, sledge:by fastforce, sledge:by auto, sledge:by force, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by blast  (2248ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [46/100] min (Suc n) (Suc m) = Suc (min n m)
+
+▶ Goal: min (Suc n) (Suc m) = Suc (min n m)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by auto', 'by simp', 'by force', 'by fastforce', 'by linarith']
+Finishers (origin): [sledge:by auto, sledge:by simp, sledge:by force, sledge:by fastforce, sledge:by linarith, llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by auto  (2241ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [47/100] take n xs @ drop n xs = xs
+
+▶ Goal: take n xs @ drop n xs = xs
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis append_take_drop_id)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis append_take_drop_id), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2239ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [48/100] drop n (drop m xs) = drop (n+m) xs
+
+▶ Goal: drop n (drop m xs) = drop (n+m) xs
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by force', 'by fastforce', 'by (metis drop_drop)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by force, sledge:by fastforce, sledge:by (metis drop_drop), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2241ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [49/100] (∃x. P x) ⟶ (∀y. P y ⟶ ∃z. P z)
+
+▶ Goal: (∃x. P x) ⟶ (∀y. P y ⟶ ∃z. P z)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2246ms)
+  finish × [llm] by clarsimp  (2128ms)
+  finish × [llm] by auto  (2123ms)
+  finish × [llm] by fastforce  (2134ms)
+  finish × [llm] by blast  (2117ms)
+  finish × [llm] by arith  (2133ms)
+  finish × [llm] by presburger  (2122ms)
+  finish × [llm] by meson  (2124ms)
+Proposals (origin): [llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs), llm:apply (induction xs)]
+  step  × [llm] apply auto (2125ms)
+  step  × [llm] apply simp (2126ms)
+  step  × [llm] apply clarsimp (2125ms)
+  step  × [llm] apply (cases xs) (2129ms)
+  step  × [llm] apply (induction xs) (2130ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [50/100] bij f ⟹ f -` (f ` A) = A
+
+▶ Goal: bij f ⟹ f -` (f ` A) = A
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by (simp add: bij_def inj_vimage_image_eq)', 'by (simp add: bij_betw_def inj_vimage_image_eq)', 'by (simp add: bij_betw_imp_inj_on inj_vimage_image_eq)', 'by (metis inj_vimage_image_eq bij_is_inj)', 'by (metis bij_def inj_vimage_image_eq)']
+Finishers (origin): [sledge:by (simp add: bij_def inj_vimage_image_eq), sledge:by (simp add: bij_betw_def inj_vimage_image_eq), sledge:by (simp add: bij_betw_imp_inj_on inj_vimage_image_eq), sledge:by (metis inj_vimage_image_eq bij_is_inj), sledge:by (metis bij_def inj_vimage_image_eq), llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by (simp add: bij_def inj_vimage_image_eq)  (2249ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [51/100] (case (a,b) of (x,y) ⇒ P x y) = P a b
+
+▶ Goal: (case (a,b) of (x,y) ⇒ P x y) = P a b
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fast', 'by force', 'by fastforce']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fast, sledge:by force, sledge:by fastforce, llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2250ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [52/100] length (map f xs) = length xs
+
+▶ Goal: length (map f xs) = length xs
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by force', 'by fastforce', 'by (metis length_map)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by force, sledge:by fastforce, sledge:by (metis length_map), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2246ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [53/100] (∀x. P x ⟶ Q) ⟶ ((∃x. P x) ⟶ Q)
+
+▶ Goal: (∀x. P x ⟶ Q) ⟶ ((∃x. P x) ⟶ Q)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by presburger', 'by blast', 'by simp', 'by auto', 'by fast']
+Finishers (origin): [sledge:by presburger, sledge:by blast, sledge:by simp, sledge:by auto, sledge:by fast, llm:by clarsimp, llm:by fastforce, llm:by arith, llm:by meson]
+  finish ✓ [sledge] by presburger  (2239ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [54/100] map id xs = xs
+
+▶ Goal: map id xs = xs
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis list.map_id)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis list.map_id), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2241ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [55/100] A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+
+▶ Goal: A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by blast', 'by fast', 'by fastforce', 'by auto', 'by force']
+Finishers (origin): [sledge:by blast, sledge:by fast, sledge:by fastforce, sledge:by auto, sledge:by force, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by blast  (2237ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [56/100] trans r ⟹ trans (r⁻¹)
+
+▶ Goal: trans r ⟹ trans (r⁻¹)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2241ms)
+  finish × [llm] by clarsimp  (2134ms)
+  finish × [llm] by auto  (2133ms)
+  finish × [llm] by fastforce  (2128ms)
+  finish × [llm] by blast  (2136ms)
+  finish × [llm] by arith  (2124ms)
+  finish × [llm] by presburger  (2136ms)
+  finish × [llm] by meson  (2138ms)
+Proposals (origin): [llm:apply simp, llm:apply auto, llm:apply clarsimp, llm:apply (cases xs), llm:apply (induction xs)]
+  step  × [llm] apply simp (2247ms)
+  step  × [llm] apply auto (2133ms)
+  step  × [llm] apply clarsimp (2128ms)
+  step  × [llm] apply (cases xs) (2135ms)
+  step  × [llm] apply (induction xs) (2134ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [57/100] length (take n xs) ≤ n
+
+▶ Goal: length (take n xs) ≤ n
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by auto', 'by simp', 'by fastforce', 'by force', 'by auto found a proof...","pos":{"line":5,"offset":68,"end_offset":80,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpj41ga6t7/Scratch.thy"}},{"kind":"writeln","message":"auto: Try this: by auto']
+Finishers (origin): [sledge:by auto, sledge:by simp, sledge:by fastforce, sledge:by force, sledge:by auto found a proof...","pos":{"line":5,"offset":68,"end_offset":80,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpj41ga6t7/Scratch.thy"}},{"kind":"writeln","message":"auto: Try this: by auto, llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by auto  (2237ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [58/100] n ≤ m ⟶ n ≤ m + k
+
+▶ Goal: n ≤ m ⟶ n ≤ m + k
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2248ms)
+  finish × [llm] by clarsimp  (2136ms)
+  finish × [llm] by auto  (2126ms)
+  finish × [llm] by fastforce  (2123ms)
+  finish × [llm] by blast  (2130ms)
+  finish × [llm] by arith  (2125ms)
+  finish × [llm] by presburger  (2127ms)
+  finish × [llm] by meson  (2123ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2250ms)
+  step  ✓ [llm] apply auto n_sub=1 (2129ms)
+  step  × [llm] apply simp (2138ms)
+  step  ✓ [llm] apply clarsimp n_sub=1 (2122ms)
+  step  × [llm] apply (cases xs) (2140ms)
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2250ms)
+  finish × [llm] by clarsimp  (2126ms)
+  finish × [llm] by auto  (2126ms)
+  finish × [llm] by fastforce  (2139ms)
+  finish × [llm] by blast  (2128ms)
+  finish × [llm] by arith  (2132ms)
+  finish × [llm] by presburger  (2129ms)
+  finish × [llm] by meson  (2125ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2245ms)
+  step  × [llm] apply auto (2133ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [59/100] inj f ⟹ finite A ⟹ card (f ` A) = card A
+
+▶ Goal: inj f ⟹ finite A ⟹ card (f ` A) = card A
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2242ms)
+  finish × [llm] by clarsimp  (2131ms)
+  finish × [llm] by auto  (2131ms)
+  finish × [llm] by fastforce  (2136ms)
+  finish × [llm] by blast  (2131ms)
+  finish × [llm] by arith  (2124ms)
+  finish × [llm] by presburger  (2127ms)
+  finish × [llm] by meson  (2136ms)
+Proposals (origin): [llm:apply simp, llm:apply auto, llm:apply clarsimp, llm:apply (cases xs), llm:apply (induction xs)]
+  step  ✓ [llm] apply simp n_sub=1 (2235ms)
+  step  ✓ [llm] apply auto n_sub=1 (2130ms)
+  step  ✓ [llm] apply clarsimp n_sub=1 (2131ms)
+  step  × [llm] apply (cases xs) (2132ms)
+  step  × [llm] apply (induction xs) (2135ms)
+Sledgehammer finishers: ['by (meson bij_betw_same_card inj_imp_bij_betw_inv)', 'by (metis inj_def card_image inj_on_def)', 'by (metis {"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (meson bij_betw_same_card inj_imp_bij_betw_inv) (18 ms)","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis inj_def card_image inj_on_def) (18 ms)","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"theorem inj ?f \\\\<Longrightarrow> finite ?A \\\\<Longrightarrow> card (?f ` ?A) = card ?A","pos":{"line":7,"offset":129,"end_offset":134,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":12,"failed":0,"total":12,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}],"task":"fbcac6cb-f0bd-49db-b701-317298e29361"})']
+Finishers (origin): [sledge:by (meson bij_betw_same_card inj_imp_bij_betw_inv), sledge:by (metis inj_def card_image inj_on_def), sledge:by (metis {"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (meson bij_betw_same_card inj_imp_bij_betw_inv) (18 ms)","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis inj_def card_image inj_on_def) (18 ms)","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":6,"offset":99,"end_offset":111,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}},{"kind":"writeln","message":"theorem inj ?f \\<Longrightarrow> finite ?A \\<Longrightarrow> card (?f ` ?A) = card ?A","pos":{"line":7,"offset":129,"end_offset":134,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":12,"failed":0,"total":12,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmptkdy6mw8/Scratch.thy"}],"task":"fbcac6cb-f0bd-49db-b701-317298e29361"}), llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by (meson bij_betw_same_card inj_imp_bij_betw_inv)  (2240ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [60/100] nth (xs @ ys) n = (if n < length xs then nth xs n else nth ys (n - length xs))
+
+▶ Goal: nth (xs @ ys) n = (if n < length xs then nth xs n else nth ys (n - length xs))
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by (metis nth_append)', 'by (simp add: nth_append)', 'by blast', 'by (metis {"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis nth_append) (4 ms)","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (simp add: nth_append) (0.9 ms)","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"vampire found a proof...","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"verit found a proof...","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"verit: Duplicate proof","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"vampire: Try this: using nth_append by blast (2 ms)","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"theorem\\n (?xs @ ?ys) ! ?n =\\n (if ?n < length ?xs then ?xs ! ?n else ?ys ! (?n - length ?xs))","pos":{"line":6,"offset":154,"end_offset":159,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}],"task":"a37a87d7-6307-4fc7-990f-5f88057b4242"})', 'by simp add: nth_append']
+Finishers (origin): [sledge:by (metis nth_append), sledge:by (simp add: nth_append), sledge:by blast, sledge:by (metis {"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis nth_append) (4 ms)","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (simp add: nth_append) (0.9 ms)","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"vampire found a proof...","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"verit found a proof...","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"verit: Duplicate proof","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"vampire: Try this: using nth_append by blast (2 ms)","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":124,"end_offset":136,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}},{"kind":"writeln","message":"theorem\n (?xs @ ?ys) ! ?n =\n (if ?n < length ?xs then ?xs ! ?n else ?ys ! (?n - length ?xs))","pos":{"line":6,"offset":154,"end_offset":159,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpvq_lnfqa/Scratch.thy"}],"task":"a37a87d7-6307-4fc7-990f-5f88057b4242"}), sledge:by simp add: nth_append, llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by (metis nth_append)  (2244ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [61/100] finite A ⟹ finite B ⟹ card (A × B) = card A * card B
+
+▶ Goal: finite A ⟹ finite B ⟹ card (A × B) = card A * card B
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by fastforce', 'by force', 'by simp', 'by auto', 'by (metis card_cartesian_product)']
+Finishers (origin): [sledge:by fastforce, sledge:by force, sledge:by simp, sledge:by auto, sledge:by (metis card_cartesian_product), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by fastforce  (2246ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [62/100] (¬ ∃x. P x) ⟷ (∀x. ¬ P x)
+
+▶ Goal: (¬ ∃x. P x) ⟷ (∀x. ¬ P x)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2248ms)
+  finish × [llm] by clarsimp  (2123ms)
+  finish × [llm] by auto  (2128ms)
+  finish × [llm] by fastforce  (2138ms)
+  finish × [llm] by blast  (2136ms)
+  finish × [llm] by arith  (2139ms)
+  finish × [llm] by presburger  (2139ms)
+  finish × [llm] by meson  (2130ms)
+Proposals (origin): [llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs), llm:apply (induction xs)]
+  step  × [llm] apply auto (2122ms)
+  step  × [llm] apply simp (2130ms)
+  step  × [llm] apply clarsimp (2128ms)
+  step  × [llm] apply (cases xs) (2129ms)
+  step  × [llm] apply (induction xs) (2135ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [63/100] (∀x. P x ⟶ R) ⟶ ((∃x. P x) ⟶ R)
+
+▶ Goal: (∀x. P x ⟶ R) ⟶ ((∃x. P x) ⟶ R)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by presburger', 'by auto', 'by simp', 'by blast', 'by fast']
+Finishers (origin): [sledge:by presburger, sledge:by auto, sledge:by simp, sledge:by blast, sledge:by fast, llm:by clarsimp, llm:by fastforce, llm:by arith, llm:by meson]
+  finish ✓ [sledge] by presburger  (2248ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [64/100] max (Suc n) (Suc m) = Suc (max n m)
+
+▶ Goal: max (Suc n) (Suc m) = Suc (max n m)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by linarith']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by linarith, llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2248ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [65/100] a ≤ b ⟶ a * c ≤ b * c
+
+▶ Goal: a ≤ b ⟶ a * c ≤ b * c
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2236ms)
+  finish × [llm] by clarsimp  (2136ms)
+  finish × [llm] by auto  (2133ms)
+  finish × [llm] by fastforce  (2134ms)
+  finish × [llm] by blast  (2138ms)
+  finish × [llm] by arith  (2132ms)
+  finish × [llm] by presburger  (2139ms)
+  finish × [llm] by meson  (2138ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2243ms)
+  step  ✓ [llm] apply auto n_sub=1 (2141ms)
+  step  × [llm] apply simp (2137ms)
+  step  ✓ [llm] apply clarsimp n_sub=1 (2141ms)
+  step  × [llm] apply (cases xs) (2140ms)
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2244ms)
+  finish × [llm] by clarsimp  (2138ms)
+  finish × [llm] by auto  (2133ms)
+  finish × [llm] by fastforce  (2135ms)
+  finish × [llm] by blast  (2139ms)
+  finish × [llm] by arith  (2136ms)
+  finish × [llm] by presburger  (2137ms)
+  finish × [llm] by meson  (2141ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2247ms)
+  step  × [llm] apply auto (2137ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [66/100] A ⊆ B ⟶ (A ∩ B = A)
+
+▶ Goal: A ⊆ B ⟶ (A ∩ B = A)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by auto', 'by fast', 'by blast', 'by fastforce', 'by force']
+Finishers (origin): [sledge:by auto, sledge:by fast, sledge:by blast, sledge:by fastforce, sledge:by force, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by auto  (2252ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [67/100] (a::int) * (b + c) = a*b + a*c
+
+▶ Goal: (a::int) * (b + c) = a*b + a*c
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by algebra', 'by (metis distrib_left)', 'by blast', 'by (metis int_distrib(2)', 'by (simp add: int_distrib(2)']
+Finishers (origin): [sledge:by algebra, sledge:by (metis distrib_left), sledge:by blast, sledge:by (metis int_distrib(2), sledge:by (simp add: int_distrib(2), llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by algebra  (2254ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [68/100] Domain (r O s) = Domain s ∩ (s -` (Domain r))
+
+▶ Goal: Domain (r O s) = Domain s ∩ (s -` (Domain r))
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2236ms)
+  finish × [llm] by clarsimp  (2133ms)
+  finish × [llm] by auto  (2135ms)
+  finish × [llm] by fastforce  (2136ms)
+  finish × [llm] by blast  (2132ms)
+  finish × [llm] by arith  (2137ms)
+  finish × [llm] by presburger  (2138ms)
+  finish × [llm] by meson  (2127ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2251ms)
+  step  × [llm] apply auto (2138ms)
+  step  × [llm] apply simp (2133ms)
+  step  × [llm] apply clarsimp (2139ms)
+  step  × [llm] apply (cases xs) (2139ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [69/100] the (Some x) = x
+
+▶ Goal: the (Some x) = x
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis option.sel)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis option.sel), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2250ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [70/100] A ⊆ B ⟶ (A ∪ B = B)
+
+▶ Goal: A ⊆ B ⟶ (A ∪ B = B)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by auto', 'by blast', 'by fast', 'by fastforce', 'by force']
+Finishers (origin): [sledge:by auto, sledge:by blast, sledge:by fast, sledge:by fastforce, sledge:by force, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by auto  (2246ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [71/100] ¬ (∀x∈A. P x) ⟷ (∃x∈A. ¬ P x)
+
+▶ Goal: ¬ (∀x∈A. P x) ⟷ (∃x∈A. ¬ P x)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by blast', 'by auto', 'by fast', 'by simp', 'by force']
+Finishers (origin): [sledge:by blast, sledge:by auto, sledge:by fast, sledge:by simp, sledge:by force, llm:by clarsimp, llm:by fastforce, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by blast  (2252ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [72/100] prod_case f (a,b) = f a b
+
+▶ Goal: prod_case f (a,b) = f a b
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2252ms)
+  finish × [llm] by clarsimp  (2127ms)
+  finish × [llm] by auto  (2136ms)
+  finish × [llm] by fastforce  (2135ms)
+  finish × [llm] by blast  (2133ms)
+  finish × [llm] by arith  (2134ms)
+  finish × [llm] by presburger  (2131ms)
+  finish × [llm] by meson  (2140ms)
+Proposals (origin): [llm:apply simp, llm:apply auto, llm:apply clarsimp, llm:apply (cases xs), llm:apply (induction xs)]
+  step  × [llm] apply simp (2255ms)
+  step  × [llm] apply auto (2131ms)
+  step  × [llm] apply clarsimp (2133ms)
+  step  × [llm] apply (cases xs) (2140ms)
+  step  × [llm] apply (induction xs) (2139ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [73/100] length (xs @ ys) = length xs + length ys
+
+▶ Goal: length (xs @ ys) = length xs + length ys
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by force', 'by fastforce', 'by (metis length_append)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by force, sledge:by fastforce, sledge:by (metis length_append), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2257ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [74/100] map_option f (Some x) = Some (f x)
+
+▶ Goal: map_option f (Some x) = Some (f x)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by blast', 'by fast', 'by fastforce']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by blast, sledge:by fast, sledge:by fastforce, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2254ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [75/100] take (length xs) xs = xs
+
+▶ Goal: take (length xs) xs = xs
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis append_eq_conv_conj take_take length_take append_take_drop_id)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis append_eq_conv_conj take_take length_take append_take_drop_id), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2253ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [76/100] case_option y f None = y
+
+▶ Goal: case_option y f None = y
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by force', 'by fastforce', 'by (metis option.simps(4)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by force, sledge:by fastforce, sledge:by (metis option.simps(4), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2252ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [77/100] finite A ⟹ card (Pow A) = 2 ^ card A
+
+▶ Goal: finite A ⟹ card (Pow A) = 2 ^ card A
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by (metis card_Pow)', 'by blast', 'by (metis {"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis card_Pow) (2 ms)","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: using card_Pow by blast (1 ms)","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"verit found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"verit: Duplicate proof","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"vampire found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"vampire: Duplicate proof","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"zipperposition found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"zipperposition: Duplicate proof","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"theorem finite ?A \\\\<Longrightarrow> card (Pow ?A) = 2 ^ card ?A","pos":{"line":6,"offset":112,"end_offset":117,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}],"task":"03c52e10-e1e8-46d9-9166-06a34a57c372"})']
+Finishers (origin): [sledge:by (metis card_Pow), sledge:by blast, sledge:by (metis {"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis card_Pow) (2 ms)","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: using card_Pow by blast (1 ms)","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"verit found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"verit: Duplicate proof","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"vampire found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"vampire: Duplicate proof","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"zipperposition found a proof...","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"zipperposition: Duplicate proof","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":82,"end_offset":94,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}},{"kind":"writeln","message":"theorem finite ?A \\<Longrightarrow> card (Pow ?A) = 2 ^ card ?A","pos":{"line":6,"offset":112,"end_offset":117,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmp61vc_so2/Scratch.thy"}],"task":"03c52e10-e1e8-46d9-9166-06a34a57c372"}), llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by (metis card_Pow)  (2241ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [78/100] n ≤ m ⟶ m - n + n = m
+
+▶ Goal: n ≤ m ⟶ m - n + n = m
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2252ms)
+  finish × [llm] by clarsimp  (2141ms)
+  finish × [llm] by auto  (2144ms)
+  finish × [llm] by fastforce  (2142ms)
+  finish × [llm] by blast  (2140ms)
+  finish × [llm] by arith  (2140ms)
+  finish × [llm] by presburger  (2142ms)
+  finish × [llm] by meson  (2142ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2250ms)
+  step  ✓ [llm] apply auto n_sub=1 (2142ms)
+  step  × [llm] apply simp (2137ms)
+  step  ✓ [llm] apply clarsimp n_sub=1 (2136ms)
+  step  × [llm] apply (cases xs) (2136ms)
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2249ms)
+  finish × [llm] by clarsimp  (2127ms)
+  finish × [llm] by auto  (2141ms)
+  finish × [llm] by fastforce  (2137ms)
+  finish × [llm] by blast  (2142ms)
+  finish × [llm] by arith  (2142ms)
+  finish × [llm] by presburger  (2136ms)
+  finish × [llm] by meson  (2126ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2258ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [79/100] a ≤ b ⟶ a mod c ≤ b mod c ∨ c=0
+
+▶ Goal: a ≤ b ⟶ a mod c ≤ b mod c ∨ c=0
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2234ms)
+  finish × [llm] by clarsimp  (2144ms)
+  finish × [llm] by auto  (2130ms)
+  finish × [llm] by fastforce  (2135ms)
+  finish × [llm] by blast  (2142ms)
+  finish × [llm] by arith  (2146ms)
+  finish × [llm] by presburger  (2143ms)
+  finish × [llm] by meson  (2140ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2135ms)
+  step  ✓ [llm] apply auto n_sub=1 (2146ms)
+  step  × [llm] apply simp (2141ms)
+  step  ✓ [llm] apply clarsimp n_sub=1 (2133ms)
+  step  × [llm] apply (cases xs) (2144ms)
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2246ms)
+  finish × [llm] by clarsimp  (2136ms)
+  finish × [llm] by auto  (2142ms)
+  finish × [llm] by fastforce  (2142ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [80/100] min a b + max a b = a + b
+
+▶ Goal: min a b + max a b = a + b
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2250ms)
+  finish × [llm] by clarsimp  (2138ms)
+  finish × [llm] by auto  (2136ms)
+  finish × [llm] by fastforce  (2143ms)
+  finish × [llm] by blast  (2139ms)
+  finish × [llm] by arith  (2133ms)
+  finish × [llm] by presburger  (2144ms)
+  finish × [llm] by meson  (2136ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2247ms)
+  step  × [llm] apply auto (2142ms)
+  step  × [llm] apply simp (2139ms)
+  step  × [llm] apply clarsimp (2143ms)
+  step  × [llm] apply (cases xs) (2133ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [81/100] sum_list (xs @ ys) = sum_list xs + sum_list ys
+
+▶ Goal: sum_list (xs @ ys) = sum_list xs + sum_list ys
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis sum_list_append)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis sum_list_append), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2251ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [82/100] inj_on f A ⟹ finite A ⟹ card (f ` A) = card A
+
+▶ Goal: inj_on f A ⟹ finite A ⟹ card (f ` A) = card A
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by (metis inj_on_iff_eq_card)', 'by (metis card_image)', 'by blast', 'by (metis {"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis inj_on_iff_eq_card) (25 ms)","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis card_image) (3 ms)","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: using card_image by blast (5 ms)","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"theorem inj_on ?f ?A \\\\<Longrightarrow> finite ?A \\\\<Longrightarrow> card (?f ` ?A) = card ?A","pos":{"line":6,"offset":121,"end_offset":126,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}],"task":"ebe0dec9-9b88-407e-a263-45a6ed210fb1"})']
+Finishers (origin): [sledge:by (metis inj_on_iff_eq_card), sledge:by (metis card_image), sledge:by blast, sledge:by (metis {"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis inj_on_iff_eq_card) (25 ms)","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis card_image) (3 ms)","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: using card_image by blast (5 ms)","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":91,"end_offset":103,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}},{"kind":"writeln","message":"theorem inj_on ?f ?A \\<Longrightarrow> finite ?A \\<Longrightarrow> card (?f ` ?A) = card ?A","pos":{"line":6,"offset":121,"end_offset":126,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpdr5t0kfa/Scratch.thy"}],"task":"ebe0dec9-9b88-407e-a263-45a6ed210fb1"}), llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by (metis inj_on_iff_eq_card)  (2248ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [83/100] finite A ⟹ finite B ⟹ (A ⊆ B ⟶ card A ≤ card B)
+
+▶ Goal: finite A ⟹ finite B ⟹ (A ⊆ B ⟶ card A ≤ card B)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by (metis card_mono)', 'by (simp add: card_mono)', 'by blast', 'by (metis {"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis card_mono) (2 ms)","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (simp add: card_mono) (2 ms)","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"vampire found a proof...","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"vampire: Try this: using card_mono by blast (2 ms)","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"theorem finite ?A \\\\<Longrightarrow> finite ?B \\\\<Longrightarrow> ?A \\\\<subseteq> ?B \\\\<longrightarrow> card ?A \\\\<le> card ?B","pos":{"line":6,"offset":123,"end_offset":128,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}],"task":"036057b6-1599-4dc7-b07a-916c6acf6259"})', 'by simp add: card_mono']
+Finishers (origin): [sledge:by (metis card_mono), sledge:by (simp add: card_mono), sledge:by blast, sledge:by (metis {"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis card_mono) (2 ms)","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (simp add: card_mono) (2 ms)","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"vampire found a proof...","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"vampire: Try this: using card_mono by blast (2 ms)","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":93,"end_offset":105,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}},{"kind":"writeln","message":"theorem finite ?A \\<Longrightarrow> finite ?B \\<Longrightarrow> ?A \\<subseteq> ?B \\<longrightarrow> card ?A \\<le> card ?B","pos":{"line":6,"offset":123,"end_offset":128,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpaknsnkt5/Scratch.thy"}],"task":"036057b6-1599-4dc7-b07a-916c6acf6259"}), sledge:by simp add: card_mono, llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by (metis card_mono)  (2259ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [84/100] case_option y f (Some x) = f x
+
+▶ Goal: case_option y f (Some x) = f x
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis option.simps(5)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis option.simps(5), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2252ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [85/100] map_sum f g (Inr y) = Inr (g y)
+
+▶ Goal: map_sum f g (Inr y) = Inr (g y)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by force', 'by fastforce', 'by (metis map_sum.simps(2)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by force, sledge:by fastforce, sledge:by (metis map_sum.simps(2), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2257ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [86/100] (∃x. P x ∨ Q x) ⟷ ((∃x. P x) ∨ (∃x. Q x))
+
+▶ Goal: (∃x. P x ∨ Q x) ⟷ ((∃x. P x) ∨ (∃x. Q x))
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by blast', 'by fast', 'by auto', 'by metis', 'by fastforce']
+Finishers (origin): [sledge:by blast, sledge:by fast, sledge:by auto, sledge:by metis, sledge:by fastforce, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by blast  (2260ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [87/100] drop (length xs) xs = []
+
+▶ Goal: drop (length xs) xs = []
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by auto', 'by simp', 'by force', 'by fastforce', 'by (metis length_0_conv length_drop diff_self_eq_0)']
+Finishers (origin): [sledge:by auto, sledge:by simp, sledge:by force, sledge:by fastforce, sledge:by (metis length_0_conv length_drop diff_self_eq_0), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by auto  (2246ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [88/100] abs (a+b) ≤ abs a + abs b
+
+▶ Goal: abs (a+b) ≤ abs a + abs b
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2243ms)
+  finish × [llm] by clarsimp  (2140ms)
+  finish × [llm] by auto  (2141ms)
+  finish × [llm] by fastforce  (2133ms)
+  finish × [llm] by blast  (2141ms)
+  finish × [llm] by arith  (2139ms)
+  finish × [llm] by presburger  (2143ms)
+  finish × [llm] by meson  (2147ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2242ms)
+  step  × [llm] apply auto (2144ms)
+  step  × [llm] apply simp (2136ms)
+  step  × [llm] apply clarsimp (2132ms)
+  step  × [llm] apply (cases xs) (2138ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [89/100] (P ⟶ Q) ⟷ (¬ P ∨ Q)
+
+▶ Goal: (P ⟶ Q) ⟷ (¬ P ∨ Q)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by presburger', 'by argo', 'by linarith', 'by satx', 'by blast']
+Finishers (origin): [sledge:by presburger, sledge:by argo, sledge:by linarith, sledge:by satx, sledge:by blast, llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by arith, llm:by meson]
+  finish ✓ [sledge] by presburger  (2249ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [90/100] n ≤ m ⟶ n ≤ m * k + m
+
+▶ Goal: n ≤ m ⟶ n ≤ m * k + m
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2250ms)
+  finish × [llm] by clarsimp  (2142ms)
+  finish × [llm] by auto  (2135ms)
+  finish × [llm] by fastforce  (2143ms)
+  finish × [llm] by blast  (2137ms)
+  finish × [llm] by arith  (2140ms)
+  finish × [llm] by presburger  (2135ms)
+  finish × [llm] by meson  (2144ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2256ms)
+  step  ✓ [llm] apply auto n_sub=1 (2144ms)
+  step  × [llm] apply simp (2135ms)
+  step  ✓ [llm] apply clarsimp n_sub=1 (2143ms)
+  step  × [llm] apply (cases xs) (2138ms)
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2260ms)
+  finish × [llm] by clarsimp  (2131ms)
+  finish × [llm] by auto  (2139ms)
+  finish × [llm] by fastforce  (2144ms)
+  finish × [llm] by blast  (2144ms)
+  finish × [llm] by arith  (2142ms)
+  finish × [llm] by presburger  (2136ms)
+  finish × [llm] by meson  (2135ms)
+Proposals (origin): [llm:apply (induction xs), llm:apply auto, llm:apply simp, llm:apply clarsimp, llm:apply (cases xs)]
+  step  × [llm] apply (induction xs) (2256ms)
+  step  × [llm] apply auto (2129ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [91/100] snd (a,b) = b
+
+▶ Goal: snd (a,b) = b
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by (metis snd_conv)']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by (metis snd_conv), llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2256ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [92/100] (P ⟶ (Q ⟶ R)) ⟷ ((P ∧ Q) ⟶ R)
+
+▶ Goal: (P ⟶ (Q ⟶ R)) ⟷ ((P ∧ Q) ⟶ R)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by argo', 'by satx', 'by blast', 'by linarith', 'by auto']
+Finishers (origin): [sledge:by argo, sledge:by satx, sledge:by blast, sledge:by linarith, sledge:by auto, llm:by simp, llm:by clarsimp, llm:by fastforce, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by argo  (2252ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [93/100] (A - B) ∪ (A ∩ B) = A
+
+▶ Goal: (A - B) ∪ (A ∩ B) = A
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by blast', 'by fastforce', 'by auto', 'by fast', 'by force']
+Finishers (origin): [sledge:by blast, sledge:by fastforce, sledge:by auto, sledge:by fast, sledge:by force, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by blast  (2257ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [94/100] finite A ⟹ finite B ⟹ card (A ∪ B) ≤ card A + card B
+
+▶ Goal: finite A ⟹ finite B ⟹ card (A ∪ B) ≤ card A + card B
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by (metis card_Un_le)', 'by (meson card_Un_le)', 'by fastforce', 'by (metis {"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis card_Un_le) (2 ms)","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (meson card_Un_le) (9 ms)","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this: using card_Un_le by fastforce (2 ms)","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this: using card_Un_Int by fastforce (5 ms)","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"theorem finite ?A \\\\<Longrightarrow> finite ?B \\\\<Longrightarrow> card (?A \\\\<union> ?B) \\\\<le> card ?A + card ?B","pos":{"line":6,"offset":128,"end_offset":133,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}],"task":"a4a54de1-14f9-438a-a5a7-fd731886036d"})', 'by force']
+Finishers (origin): [sledge:by (metis card_Un_le), sledge:by (meson card_Un_le), sledge:by fastforce, sledge:by (metis {"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"metis: Try this: by (metis card_Un_le) (2 ms)","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"metis found a proof...","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"cvc5 found a proof...","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"metis: Duplicate proof","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"cvc5: Try this: by (meson card_Un_le) (9 ms)","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"fastforce found a proof...","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this: using card_Un_le by fastforce (2 ms)","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"fastforce: Try this: using card_Un_Int by fastforce (5 ms)","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"Done","pos":{"line":5,"offset":98,"end_offset":110,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}},{"kind":"writeln","message":"theorem finite ?A \\<Longrightarrow> finite ?B \\<Longrightarrow> card (?A \\<union> ?B) \\<le> card ?A + card ?B","pos":{"line":6,"offset":128,"end_offset":133,"file":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}}],"exports":[],"status":{"percentage":100,"unprocessed":0,"running":0,"finished":10,"failed":0,"total":10,"consolidated":true,"canceled":false,"ok":true,"warned":0},"theory_name":"Draft.Scratch","node_name":"/var/folders/t5/j6r05lvs5452qx8c3tkqwn7c0000gn/T/tmpq5_4bnro/Scratch.thy"}],"task":"a4a54de1-14f9-438a-a5a7-fd731886036d"}), sledge:by force, llm:by simp, llm:by clarsimp, llm:by auto, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by (metis card_Un_le)  (2246ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [95/100] (f ` (A ∩ B)) ⊆ (f ` A ∩ f ` B)
+
+▶ Goal: (f ` (A ∩ B)) ⊆ (f ` A ∩ f ` B)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by blast', 'by fast', 'by fastforce', 'by auto', 'by force']
+Finishers (origin): [sledge:by blast, sledge:by fast, sledge:by fastforce, sledge:by auto, sledge:by force, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by blast  (2263ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [96/100] sym r ⟹ sym (r⁻¹)
+
+▶ Goal: sym r ⟹ sym (r⁻¹)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by clarsimp, llm:by auto, llm:by fastforce, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish × [llm] by simp  (2253ms)
+  finish × [llm] by clarsimp  (2144ms)
+  finish × [llm] by auto  (2139ms)
+  finish × [llm] by fastforce  (2145ms)
+  finish × [llm] by blast  (2145ms)
+  finish × [llm] by arith  (2148ms)
+  finish × [llm] by presburger  (2136ms)
+  finish × [llm] by meson  (2146ms)
+Proposals (origin): [llm:apply simp, llm:apply auto, llm:apply clarsimp, llm:apply (cases xs), llm:apply (induction xs)]
+  step  × [llm] apply simp (2248ms)
+  step  × [llm] apply auto (2140ms)
+  step  × [llm] apply clarsimp (2148ms)
+  step  × [llm] apply (cases xs) (2147ms)
+  step  × [llm] apply (induction xs) (2147ms)
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [97/100] map_option f None = None
+
+▶ Goal: map_option f None = None
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by blast', 'by auto', 'by fastforce', 'by fast']
+Finishers (origin): [sledge:by simp, sledge:by blast, sledge:by auto, sledge:by fastforce, sledge:by fast, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2259ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [98/100] (∀x∈A. P x ∧ Q x) ⟷ ((∀x∈A. P x) ∧ (∀x∈A. Q x))
+
+▶ Goal: (∀x∈A. P x ∧ Q x) ⟷ ((∀x∈A. P x) ∧ (∀x∈A. Q x))
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by blast', 'by fast', 'by fastforce', 'by auto', 'by force']
+Finishers (origin): [sledge:by blast, sledge:by fast, sledge:by fastforce, sledge:by auto, sledge:by force, llm:by simp, llm:by clarsimp, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by blast  (2243ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [99/100] (∀x. P x) ⟶ (∀y. P y)
+
+▶ Goal: (∀x. P x) ⟶ (∀y. P y)
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by satx', 'by argo', 'by presburger', 'by blast', 'by auto']
+Finishers (origin): [sledge:by satx, sledge:by argo, sledge:by presburger, sledge:by blast, sledge:by auto, llm:by simp, llm:by clarsimp, llm:by fastforce, llm:by arith, llm:by meson]
+  finish ✓ [sledge] by satx  (2253ms)
+✔ PROVED
+[rerank_on__sledge_on__model_gemini:gemini-3-flash-preview] (run 1/1) [100/100] (a::nat) ≤ b ⟶ a + c ≤ b + c
+
+▶ Goal: (a::nat) ≤ b ⟶ a + c ≤ b + c
+Models: gemini:gemini-3-flash-preview | Beam=4 | MaxDepth=8 | Timeout=120s
+Sledgehammer finishers: ['by simp', 'by auto', 'by fastforce', 'by force', 'by linarith']
+Finishers (origin): [sledge:by simp, sledge:by auto, sledge:by fastforce, sledge:by force, sledge:by linarith, llm:by clarsimp, llm:by blast, llm:by arith, llm:by presburger, llm:by meson]
+  finish ✓ [sledge] by simp  (2259ms)
+✔ PROVED
+\n=== Benchmark Report ===
+Suite:  hol_main_mid_goals_test
+Config: rerank_on__sledge_on__model_gemini:gemini-3-flash-preview
+  Success: 75 / 100  (75.0%)
+  Median time (all): 17.63s | Avg depth: 1.09
+CSV → datasets/results/20260516-013156-hol_main_mid_goals_test-rerank_on__sledge_on__model_gemini:gemini-3-flash-preview.csv
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 52298 is closed

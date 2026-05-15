@@ -1,0 +1,24 @@
+/Users/will/CS/2026/3806/Assignment2/llm-isabelle/baselines/sledge_only.py:15: SyntaxWarning: invalid escape sequence '\<'
+  - Converts Unicode (∈ ∪ ⟹ λ etc.) to Isabelle escapes (\<in> \<union> \<Longrightarrow> \<lambda> …).
+=== Sledgehammer-only (standalone) ===
+Goals: 8 | imports: Main | sledge-timeout: 30s | goal-timeout: 90s
+[1/8] {x} ∪ A = insert x A
+  -> OK    (13.73s)  by auto
+[2/8] x ∈ insert y A ⟷ (x = y ∨ x ∈ A)
+  -> OK    (9.25s)  by simp
+[3/8] A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+  -> OK    (9.62s)  by (simp add: inf_sup_distrib1)
+[4/8] A ⊆ A ∪ B
+  -> OK    (9.14s)  by simp
+[5/8] A ∩ B ⊆ A
+  -> OK    (9.25s)  by simp
+[6/8] (A ⊆ B ∧ B ⊆ C) ⟹ A ⊆ C
+  -> OK    (9.10s)  by blast
+[7/8] (A ⊆ B ∧ B ⊆ A) ⟹ A = B
+  -> OK    (8.49s)  by (simp add: subset_antisym)
+[8/8] set (xs @ ys) = set xs ∪ set ys
+  -> OK    (9.04s)  by simp
+
+=== Summary ===
+Success: 8/8 (100.0%)
+Median time: 9.25s | Average time: 9.70s

@@ -1,0 +1,212 @@
+server "planner" = 127.0.0.1:58789 (password "ce361d2f-9fa5-4b8b-b9e1-e14483348a25")
+session_id: f124a4f7-c846-4f49-9c12-8651368f918c | session: HOL
+
+=== Planner suite: hol_main_easy_goals_test (100 goals) ===
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [1/100] surj f ⟷ (∀y. ∃x. f x = y)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 48235 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [2/100] (f ∘ (g ∘ h)) = ((f ∘ g) ∘ h)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 48159 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [3/100] (a::int) + 0 = a
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 49907 is closed
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 51244 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [4/100] (∀x. P x ⟶ Q x) ⟶ ((∃x. P x) ⟶ (∃x. Q x))
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [5/100] map fst (zip xs ys) = take (min (length xs) (length ys)) xs
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 52957 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [6/100] length (replicate n x) = n
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 54686 is closed
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 55976 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [7/100] (A ⟶ (B ⟶ C)) ⟶ (A ∧ B ⟶ C)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 57224 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [8/100] min (m::nat) n + k = min (m + k) (n + k)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 59060 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [9/100] (A - B) ∪ (A ∩ B) = A
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 59406 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [10/100] (min (m::nat) n) + (max m n) = m + n
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 59786 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [11/100] (0::nat) + m = m
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 60105 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [12/100] (if A then B else B) = B
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 60510 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [13/100] take n (take m xs) = take (min n m) xs
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 60832 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [14/100] drop n (drop m xs) = drop (n + m) xs
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 61207 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [15/100] (m::nat) + 0 = m
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 61542 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [16/100] (f(x := f x)) = f
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 61918 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [17/100] map id xs = xs
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 62263 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [18/100] 0 + (a::int) = a
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 62593 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [19/100] min (m::nat) n ≤ m
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 62928 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [20/100] Range (r O s) ⊆ Range s
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 63297 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [21/100] Id O r = r
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 63650 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [22/100] f ` (A ∩ B) ⊆ (f ` A) ∩ (f ` B)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 63982 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [23/100] converse (r O s) = (converse s) O (converse r)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 64347 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [24/100] case_prod f (x,y) = f x y
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 64721 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [25/100] length ([m..<m+n]) = n
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 65063 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [26/100] map (g ∘ f) xs = map g (map f xs)
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [27/100] (m::nat) ≠ 0 ⟷ (∃k. m = Suc k)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 65417 is closed
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 65735 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [28/100] x ∈ (A ∩ B) ⟷ (x ∈ A ∧ x ∈ B)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 66128 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [29/100] -( (a::int) - b ) = b - a
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 66485 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [30/100] Domain (Id_on A) = A
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 66842 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [31/100] (∃x. P x ∧ Q x) ⟶ ((∃x. P x) ∧ (∃x. Q x))
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 67175 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [32/100] x ≠ z ⟶ (f(x := y)) z = f z
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 67544 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [33/100] rev (map f xs) = map f (rev xs)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 67901 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [34/100] zip (map f xs) (map g ys) = map (λp. (f (fst p), g (snd p))) (zip xs ys)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 68223 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [35/100] (m::nat) + Suc n = Suc (m + n)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 68578 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [36/100] inj_on f A ⟷ (∀x∈A. ∀y∈A. f x = f y ⟶ x = y)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 68955 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [37/100] map_sum id id s = s
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 69290 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [38/100] filter P (rev xs) = rev (filter P xs)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 69642 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [39/100] ((a::int) + b) - c = a + (b - c)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 69959 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [40/100] A ⊆ B ⟷ (A - B = {})
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 70345 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [41/100] Domain (r O s) ⊆ Domain r
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 70676 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [42/100] (g ∘ f) ` A = g ` (f ` A)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 71037 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [43/100] (f ∘ id) = f
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 71417 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [44/100] (id ∘ f) = f
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 71774 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [45/100] {x∈A. P x ∨ Q x} = {x∈A. P x} ∪ {x∈A. Q x}
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 72109 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [46/100] map snd (zip xs ys) = take (min (length xs) (length ys)) ys
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 72442 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [47/100] distinct xs ⟷ length xs = length (remdups xs)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 72830 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [48/100] set (filter P xs) = {x ∈ set xs. P x}
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 73155 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [49/100] (∀x. P x) ⟷ (¬ (∃x. ¬ P x))
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 73515 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [50/100] Range (Id_on A) = A
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 73845 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [51/100] case_sum f g (Inr y) = g y
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 74228 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [52/100] (f(x := y)) x = y
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 74587 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [53/100] (¬ A ∧ ¬ B) ⟷ ¬(A ∨ B)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 74920 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [54/100] set (replicate n x) ⊆ {x}
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 75277 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [55/100] (A - B) ∩ B = {}
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 75645 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [56/100] (λx. x) = id
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 75999 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [57/100] drop n (xs @ ys) = (drop n xs) @ (drop (n - length xs) ys)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 76329 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [58/100] (Suc m ≤ Suc n) ⟷ (m ≤ n)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 76684 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [59/100] f ` (A ∪ B) = (f ` A) ∪ (f ` B)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 77053 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [60/100] remdups (remdups xs) = remdups xs
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 77378 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [61/100] (A × (B ∩ C)) = (A × B) ∩ (A × C)
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [62/100] (A ∧ (B ∨ C)) ⟶ ((A ∧ B) ∨ (A ∧ C))Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 77728 is closed
+
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 78070 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [63/100] ((A ⟶ C) ∧ (B ⟶ C)) ⟶ (A ∨ B ⟶ C)
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [64/100] set (rev xs) = set xsLoop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 78470 is closed
+
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 78806 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [65/100] (m::nat) ≤ n ⟷ (∃k. m + k = n)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 79192 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [66/100] {x∈A. True} = A
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 79527 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [67/100] sum_list (map (λ_. (k::nat)) xs) = k * length xs
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 79860 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [68/100] inj f ⟷ (∀x y. f x = f y ⟶ x = y)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 80263 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [69/100] max (a::int) b + c = max (a + c) (b + c)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 80603 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [70/100] {x∈A. False} = {}
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 80980 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [71/100] (A ∧ (B ⟶ C)) ⟶ ((A ∧ B) ⟶ C)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 81308 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [72/100] snd (x,y) = y
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 81661 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [73/100] take n xs = take n (xs @ ys) ⟷ n ≤ length xs
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 81993 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [74/100] (a::int) + (b + c) = (a + b) + c
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 82344 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [75/100] concat (map (λx. [x]) xs) = xs
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 82724 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [76/100] min (a::int) b + c = min (a + c) (b + c)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 83040 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [77/100] ((A ∩ B) × C) = (A × C) ∩ (B × C)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 83402 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [78/100] max (m::nat) n + k = max (m + k) (n + k)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 83777 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [79/100] abs ((a::int) - c) ≤ abs (a - b) + abs (b - c)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 84115 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [80/100] m ≤ max (m::nat) n
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 84465 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [81/100] length (zip xs ys) = min (length xs) (length ys)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 84838 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [82/100] (r O s) O t = r O (s O t)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 85169 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [83/100] x ∈ (A ∪ B) ⟷ (x ∈ A ∨ x ∈ B)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 85503 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [84/100] abs ((a::int) + b) = abs (b + a)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 85856 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [85/100] map_option id o = o
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 86235 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [86/100] (A ⟶ B) ⟶ (¬B ⟶ ¬A)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 86582 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [87/100] map f (concat xss) = concat (map (map f) xss)
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [88/100] (m::nat) * (n + k) = m*n + m*k
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 86916 is closed
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 87263 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [89/100] (f = g) ⟷ (∀x. f x = g x)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 87620 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [90/100] (m::nat) ≤ n ⟶ m ≤ n + k
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 87963 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [91/100] ((a::int) - b) + c = a + (c - b)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 88321 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [92/100] Pow A ⊆ Pow B ⟷ A ⊆ B
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 88643 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [93/100] {x∈A. P x ∧ Q x} = {x∈A. P x} ∩ {x∈A. Q x}
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 89028 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [94/100] converse Id = Id
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 89364 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [95/100] r O Id = r
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 89706 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [96/100] Id_on A ⊆ Id
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 90081 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [97/100] fst (x,y) = x
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 90678 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [98/100] (A ⟶ B) ⟷ (¬A ∨ B)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 91665 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [99/100] Pow A ∩ Pow B = Pow (A ∩ B)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 92456 is closed
+[mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [100/100] map Suc ([m..<m+n]) = [Suc m ..< Suc (m+n)]
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 93408 is closed
+
+=== Planner Benchmark Report ===
+Suite:  hol_main_easy_goals_test
+Config: mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict
+  Success: 0 / 100  (0.0%)
+  Median time (all): 135.98s | Median fills: 0
+CSV → datasets/planner_results/20260516-092305-hol_main_easy_goals_test-mode_auto__k3__t60__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict.csv

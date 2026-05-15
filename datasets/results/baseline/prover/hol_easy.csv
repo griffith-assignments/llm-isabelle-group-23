@@ -1,0 +1,101 @@
+goal,success,depth,elapsed_s,model,timeout,use_calls,steps_len
+surj f ⟷ (∀y. ∃x. f x = y),True,1,29.996873140335083,gemini:gemini-3-flash-preview,False,2,2
+(f ∘ (g ∘ h)) = ((f ∘ g) ∘ h),True,1,32.94989800453186,gemini:gemini-3-flash-preview,False,4,2
+(a::int) + 0 = a,False,1,122.16267704963684,gemini:gemini-3-flash-preview,False,5,1
+(∀x. P x ⟶ Q x) ⟶ ((∃x. P x) ⟶ (∃x. Q x)),True,1,29.228729963302612,gemini:gemini-3-flash-preview,False,7,2
+map fst (zip xs ys) = take (min (length xs) (length ys)) xs,True,1,41.60035800933838,gemini:gemini-3-flash-preview,False,9,2
+length (replicate n x) = n,True,1,25.721837997436523,gemini:gemini-3-flash-preview,False,11,2
+(A ⟶ (B ⟶ C)) ⟶ (A ∧ B ⟶ C),True,1,31.448413133621216,gemini:gemini-3-flash-preview,False,13,2
+min (m::nat) n + k = min (m + k) (n + k),True,1,25.633126258850098,gemini:gemini-3-flash-preview,False,15,2
+(A - B) ∪ (A ∩ B) = A,True,1,30.2061870098114,gemini:gemini-3-flash-preview,False,17,2
+(min (m::nat) n) + (max m n) = m + n,True,1,26.511910915374756,gemini:gemini-3-flash-preview,False,19,2
+(0::nat) + m = m,True,1,31.086185932159424,gemini:gemini-3-flash-preview,False,21,2
+(if A then B else B) = B,True,1,20.466902017593384,gemini:gemini-3-flash-preview,False,23,2
+take n (take m xs) = take (min n m) xs,True,1,28.729071140289307,gemini:gemini-3-flash-preview,False,25,2
+drop n (drop m xs) = drop (n + m) xs,True,1,27.70067572593689,gemini:gemini-3-flash-preview,False,27,2
+(m::nat) + 0 = m,True,1,19.761571168899536,gemini:gemini-3-flash-preview,False,29,2
+(f(x := f x)) = f,True,1,26.337481021881104,gemini:gemini-3-flash-preview,False,31,2
+map id xs = xs,True,1,36.71048593521118,gemini:gemini-3-flash-preview,False,33,2
+0 + (a::int) = a,True,1,18.9520480632782,gemini:gemini-3-flash-preview,False,35,2
+min (m::nat) n ≤ m,True,1,21.480191230773926,gemini:gemini-3-flash-preview,False,37,2
+Range (r O s) ⊆ Range s,True,1,31.142234086990356,gemini:gemini-3-flash-preview,False,39,2
+Id O r = r,True,1,28.941763162612915,gemini:gemini-3-flash-preview,False,41,2
+f ` (A ∩ B) ⊆ (f ` A) ∩ (f ` B),True,1,26.50972080230713,gemini:gemini-3-flash-preview,False,43,2
+converse (r O s) = (converse s) O (converse r),True,1,25.521796703338623,gemini:gemini-3-flash-preview,False,45,2
+"case_prod f (x,y) = f x y",True,1,25.781423807144165,gemini:gemini-3-flash-preview,False,47,2
+length ([m..<m+n]) = n,True,1,24.051806926727295,gemini:gemini-3-flash-preview,False,49,2
+map (g ∘ f) xs = map g (map f xs),True,1,22.24352502822876,gemini:gemini-3-flash-preview,False,51,2
+(m::nat) ≠ 0 ⟷ (∃k. m = Suc k),True,1,44.07265782356262,gemini:gemini-3-flash-preview,False,53,2
+x ∈ (A ∩ B) ⟷ (x ∈ A ∧ x ∈ B),True,1,41.64886498451233,gemini:gemini-3-flash-preview,False,55,2
+-( (a::int) - b ) = b - a,True,1,20.37420892715454,gemini:gemini-3-flash-preview,False,57,2
+Domain (Id_on A) = A,True,1,28.979241847991943,gemini:gemini-3-flash-preview,False,59,2
+(∃x. P x ∧ Q x) ⟶ ((∃x. P x) ∧ (∃x. Q x)),True,1,23.398257970809937,gemini:gemini-3-flash-preview,False,61,2
+x ≠ z ⟶ (f(x := y)) z = f z,True,1,43.9753680229187,gemini:gemini-3-flash-preview,False,63,2
+rev (map f xs) = map f (rev xs),True,1,31.73617720603943,gemini:gemini-3-flash-preview,False,65,2
+"zip (map f xs) (map g ys) = map (λp. (f (fst p), g (snd p))) (zip xs ys)",False,1,86.83721089363098,gemini:gemini-3-flash-preview,False,66,1
+(m::nat) + Suc n = Suc (m + n),True,1,28.965222120285034,gemini:gemini-3-flash-preview,False,68,2
+inj_on f A ⟷ (∀x∈A. ∀y∈A. f x = f y ⟶ x = y),True,1,29.020582914352417,gemini:gemini-3-flash-preview,False,70,2
+map_sum id id s = s,True,1,23.226150274276733,gemini:gemini-3-flash-preview,False,72,2
+filter P (rev xs) = rev (filter P xs),True,1,29.571286916732788,gemini:gemini-3-flash-preview,False,74,2
+((a::int) + b) - c = a + (b - c),True,1,23.352898120880127,gemini:gemini-3-flash-preview,False,76,2
+A ⊆ B ⟷ (A - B = {}),True,1,20.7443950176239,gemini:gemini-3-flash-preview,False,78,2
+Domain (r O s) ⊆ Domain r,True,1,22.848236799240112,gemini:gemini-3-flash-preview,False,80,2
+(g ∘ f) ` A = g ` (f ` A),True,1,21.824543952941895,gemini:gemini-3-flash-preview,False,82,2
+(f ∘ id) = f,True,1,27.16295599937439,gemini:gemini-3-flash-preview,False,84,2
+(id ∘ f) = f,True,1,20.464721202850342,gemini:gemini-3-flash-preview,False,86,2
+{x∈A. P x ∨ Q x} = {x∈A. P x} ∪ {x∈A. Q x},True,1,25.509296894073486,gemini:gemini-3-flash-preview,False,88,2
+map snd (zip xs ys) = take (min (length xs) (length ys)) ys,True,1,41.45202708244324,gemini:gemini-3-flash-preview,False,90,2
+distinct xs ⟷ length xs = length (remdups xs),True,1,44.35354709625244,gemini:gemini-3-flash-preview,False,92,2
+set (filter P xs) = {x ∈ set xs. P x},True,1,26.597361087799072,gemini:gemini-3-flash-preview,False,94,2
+(∀x. P x) ⟷ (¬ (∃x. ¬ P x)),True,1,24.469542741775513,gemini:gemini-3-flash-preview,False,96,2
+Range (Id_on A) = A,True,1,24.489375829696655,gemini:gemini-3-flash-preview,False,98,2
+case_sum f g (Inr y) = g y,True,1,21.674203872680664,gemini:gemini-3-flash-preview,False,100,2
+(f(x := y)) x = y,True,1,20.477285861968994,gemini:gemini-3-flash-preview,False,102,2
+(¬ A ∧ ¬ B) ⟷ ¬(A ∨ B),True,1,21.781420946121216,gemini:gemini-3-flash-preview,False,104,2
+set (replicate n x) ⊆ {x},True,1,25.794683933258057,gemini:gemini-3-flash-preview,False,106,2
+(A - B) ∩ B = {},True,1,23.722161054611206,gemini:gemini-3-flash-preview,False,108,2
+(λx. x) = id,True,1,31.79035210609436,gemini:gemini-3-flash-preview,False,110,2
+drop n (xs @ ys) = (drop n xs) @ (drop (n - length xs) ys),True,1,35.697760820388794,gemini:gemini-3-flash-preview,False,112,2
+(Suc m ≤ Suc n) ⟷ (m ≤ n),True,1,24.239332914352417,gemini:gemini-3-flash-preview,False,114,2
+f ` (A ∪ B) = (f ` A) ∪ (f ` B),True,1,23.469440937042236,gemini:gemini-3-flash-preview,False,116,2
+remdups (remdups xs) = remdups xs,True,1,20.690346002578735,gemini:gemini-3-flash-preview,False,118,2
+(A × (B ∩ C)) = (A × B) ∩ (A × C),True,1,28.553048849105835,gemini:gemini-3-flash-preview,False,120,2
+(A ∧ (B ∨ C)) ⟶ ((A ∧ B) ∨ (A ∧ C)),True,1,27.809417009353638,gemini:gemini-3-flash-preview,False,122,2
+((A ⟶ C) ∧ (B ⟶ C)) ⟶ (A ∨ B ⟶ C),True,1,24.645784854888916,gemini:gemini-3-flash-preview,False,124,2
+set (rev xs) = set xs,True,1,16.22750473022461,gemini:gemini-3-flash-preview,False,126,2
+(m::nat) ≤ n ⟷ (∃k. m + k = n),True,1,23.242817163467407,gemini:gemini-3-flash-preview,False,128,2
+{x∈A. True} = A,True,1,18.224738121032715,gemini:gemini-3-flash-preview,False,130,2
+sum_list (map (λ_. (k::nat)) xs) = k * length xs,False,1,61.51816201210022,gemini:gemini-3-flash-preview,False,139,1
+inj f ⟷ (∀x y. f x = f y ⟶ x = y),True,1,18.796399116516113,gemini:gemini-3-flash-preview,False,141,2
+max (a::int) b + c = max (a + c) (b + c),True,1,17.581048727035522,gemini:gemini-3-flash-preview,False,143,2
+{x∈A. False} = {},True,1,16.47827696800232,gemini:gemini-3-flash-preview,False,145,2
+(A ∧ (B ⟶ C)) ⟶ ((A ∧ B) ⟶ C),True,1,15.17442512512207,gemini:gemini-3-flash-preview,False,147,2
+"snd (x,y) = y",True,1,18.320837259292603,gemini:gemini-3-flash-preview,False,149,2
+take n xs = take n (xs @ ys) ⟷ n ≤ length xs,False,1,61.58980703353882,gemini:gemini-3-flash-preview,True,161,2
+(a::int) + (b + c) = (a + b) + c,True,1,16.441097021102905,gemini:gemini-3-flash-preview,False,163,2
+concat (map (λx. [x]) xs) = xs,True,1,15.751112937927246,gemini:gemini-3-flash-preview,False,165,2
+min (a::int) b + c = min (a + c) (b + c),True,1,15.242232084274292,gemini:gemini-3-flash-preview,False,167,2
+((A ∩ B) × C) = (A × C) ∩ (B × C),True,1,15.007356882095337,gemini:gemini-3-flash-preview,False,169,2
+max (m::nat) n + k = max (m + k) (n + k),True,1,17.618509769439697,gemini:gemini-3-flash-preview,False,171,2
+abs ((a::int) - c) ≤ abs (a - b) + abs (b - c),True,1,17.674224853515625,gemini:gemini-3-flash-preview,False,173,2
+m ≤ max (m::nat) n,True,1,17.68827986717224,gemini:gemini-3-flash-preview,False,175,2
+length (zip xs ys) = min (length xs) (length ys),True,1,17.331417083740234,gemini:gemini-3-flash-preview,False,177,2
+(r O s) O t = r O (s O t),True,1,14.822507858276367,gemini:gemini-3-flash-preview,False,179,2
+x ∈ (A ∪ B) ⟷ (x ∈ A ∨ x ∈ B),True,1,16.605432987213135,gemini:gemini-3-flash-preview,False,181,2
+abs ((a::int) + b) = abs (b + a),True,1,22.409554958343506,gemini:gemini-3-flash-preview,False,183,2
+map_option id o = o,False,1,53.042441844940186,gemini:gemini-3-flash-preview,False,197,1
+(A ⟶ B) ⟶ (¬B ⟶ ¬A),True,1,14.981537103652954,gemini:gemini-3-flash-preview,False,199,2
+map f (concat xss) = concat (map (map f) xss),True,1,18.634092092514038,gemini:gemini-3-flash-preview,False,201,2
+(m::nat) * (n + k) = m*n + m*k,True,1,17.204659938812256,gemini:gemini-3-flash-preview,False,203,2
+(f = g) ⟷ (∀x. f x = g x),True,1,15.320289134979248,gemini:gemini-3-flash-preview,False,205,2
+(m::nat) ≤ n ⟶ m ≤ n + k,True,1,14.337785959243774,gemini:gemini-3-flash-preview,False,207,2
+((a::int) - b) + c = a + (c - b),True,1,15.396667957305908,gemini:gemini-3-flash-preview,False,209,2
+Pow A ⊆ Pow B ⟷ A ⊆ B,True,1,19.354304790496826,gemini:gemini-3-flash-preview,False,211,2
+{x∈A. P x ∧ Q x} = {x∈A. P x} ∩ {x∈A. Q x},True,1,16.07259488105774,gemini:gemini-3-flash-preview,False,213,2
+converse Id = Id,True,1,18.84376811981201,gemini:gemini-3-flash-preview,False,215,2
+r O Id = r,True,1,14.954586029052734,gemini:gemini-3-flash-preview,False,217,2
+Id_on A ⊆ Id,True,1,18.01107382774353,gemini:gemini-3-flash-preview,False,219,2
+"fst (x,y) = x",True,1,17.156992197036743,gemini:gemini-3-flash-preview,False,221,2
+(A ⟶ B) ⟷ (¬A ∨ B),True,1,18.52460503578186,gemini:gemini-3-flash-preview,False,223,2
+Pow A ∩ Pow B = Pow (A ∩ B),True,1,18.285287141799927,gemini:gemini-3-flash-preview,False,225,2
+map Suc ([m..<m+n]) = [Suc m ..< Suc (m+n)],True,1,18.64116668701172,gemini:gemini-3-flash-preview,False,227,2

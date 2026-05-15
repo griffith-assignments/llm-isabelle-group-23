@@ -1,0 +1,19 @@
+goal,success,depth,elapsed_s,model,timeout,use_calls,steps_len
+x ∈ set xs ⟹ x ∈ set (xs @ ys),False,1,31.421021938323975,gemini:gemini-3-flash-preview,False,2,1
+set (xs @ ys) = set xs ∪ set ys,True,1,26.421009063720703,gemini:gemini-3-flash-preview,False,4,2
+map id xs = xs,False,1,31.44749903678894,gemini:gemini-3-flash-preview,False,7,1
+take (length xs) (xs @ ys) = xs,True,1,27.535173177719116,gemini:gemini-3-flash-preview,False,9,2
+map f (xs @ ys) = map f xs @ map f ys,True,1,27.215575218200684,gemini:gemini-3-flash-preview,False,11,2
+length (xs @ ys) = length xs + length ys,True,1,27.950865983963013,gemini:gemini-3-flash-preview,False,13,2
+filter p (xs @ ys) = filter p xs @ filter p ys,False,1,31.8874728679657,gemini:gemini-3-flash-preview,False,16,1
+map f (rev xs) = rev (map f xs),False,1,40.34270906448364,gemini:gemini-3-flash-preview,False,17,1
+drop (length xs) (xs @ ys) = ys,True,1,26.09708285331726,gemini:gemini-3-flash-preview,False,19,2
+distinct xs ⟹ distinct (rev xs),True,1,26.051901817321777,gemini:gemini-3-flash-preview,False,21,2
+xs @ [] = xs,False,1,39.72861194610596,gemini:gemini-3-flash-preview,False,22,1
+take n xs @ drop n xs = xs,True,1,28.034882068634033,gemini:gemini-3-flash-preview,False,24,2
+[] @ xs = xs,True,1,24.7220721244812,gemini:gemini-3-flash-preview,False,26,2
+x ∈ set ys ⟹ x ∈ set (xs @ ys),False,1,31.488924264907837,gemini:gemini-3-flash-preview,False,29,1
+map f (filter p xs) = filter (λx. p x) (map f xs),False,1,36.752017974853516,gemini:gemini-3-flash-preview,False,30,1
+length (rev xs) = length xs,False,1,33.02496600151062,gemini:gemini-3-flash-preview,False,31,1
+rev (rev xs) = xs,True,1,26.92030382156372,gemini:gemini-3-flash-preview,False,33,2
+rev (xs @ ys) = rev ys @ rev xs,True,1,28.551863193511963,gemini:gemini-3-flash-preview,False,35,2

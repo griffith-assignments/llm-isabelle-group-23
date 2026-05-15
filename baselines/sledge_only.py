@@ -269,7 +269,7 @@ def main() -> None:
     ok = 0
     times: List[float] = []
     for i, g in enumerate(goals, 1):
-        print(f"[{i}/{len(goals)}] {g}")
+        print(f"[{i}/{len(goals)}] {g}", flush=True)
         t0 = time.time()
         success, method, log = prove_with_sledgehammer(
             g, args.imports, args.sledge_timeout, args.goal_timeout, args.provers
@@ -278,9 +278,9 @@ def main() -> None:
         times.append(dt)
         if success:
             ok += 1
-            print(f"  -> OK    ({dt:.2f}s)  {method}")
+            print(f"  -> OK    ({dt:.2f}s)  {method}", flush=True)
         else:
-            print(f"  -> FAIL  ({dt:.2f}s)")
+            print(f"  -> FAIL  ({dt:.2f}s)", flush=True)
             if args.print_logs:
                 print_log_snippet(log, args.log_lines)
 

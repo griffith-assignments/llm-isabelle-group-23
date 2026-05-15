@@ -1,0 +1,8 @@
+server "planner" = 127.0.0.1:65123 (password "933a853c-263e-4428-a3b6-8c17cd0ae45a")
+session_id: fd099497-51e4-4115-84aa-e1407f72b02e | session: HOL
+
+=== Planner suite: hol_main_mid_goals_test (100 goals) ===
+[mode_auto__k3__t120__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [1/100] trancl (r ∪ s) = trancl (trancl r ∪ trancl s)
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 93999 is closed
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 93915 is closed
+[mode_auto__k3__t120__repairs_on__model_gemini:gemini-3-flash-preview__verify__strict] (run 1/1) [2/100] r ⊆ s ⟹ rtrancl r ⊆ rtrancl s
