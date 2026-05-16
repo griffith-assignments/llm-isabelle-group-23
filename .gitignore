@@ -7,3 +7,6 @@ __pycache__/
 # Baseline benchmarking — local-only, refetchable / transient
 external/
 datasets/planner_results/
+
+# Transient per-run logs (canonical results live in datasets/results/baseline/)
+logs/attempts.log.jsonl
